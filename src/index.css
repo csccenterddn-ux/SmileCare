@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  
+  --color-primary: #237FE3;
+  --color-primary-hover: #69B2FF;
+  --color-primary-navy: #0B2240;
+  --color-primary-navy-hover: #071B35;
+  --color-primary-light: #69B2FF;
+  --color-primary-dark: #0B2240;
+  
+  --color-teal-brand: #237FE3;
+  --color-teal-light: #F4F9FF;
+  --color-teal-mid: #BFD9FF;
+  --color-accent: #237FE3;
+  --color-accent-dark: #69B2FF;
+  --color-text-dark: #0B2240;
+  --color-text-mid: #475569;
+  --color-text-light: #64748B;
+  --color-mid-grey: #E2E8F0;
+  --color-gold: #C9A86A;
+  --color-success: #10B981;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+@keyframes pulse-wa {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); }
+  50% { box-shadow: 0 4px 32px rgba(37,211,102,0.75), 0 0 0 8px rgba(37,211,102,0.15); }
+}
+

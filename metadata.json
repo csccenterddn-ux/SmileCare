@@ -1,0 +1,8 @@
+{
+  "name": "Smile Care Dental Clinic",
+  "description": "Premium Dental Care Clinic with advanced technology, gentle treatments, and beautiful smiles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
