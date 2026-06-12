@@ -134,7 +134,7 @@ export default function Testimonials() {
             Trusted By 12,000+ Happy Patients
           </h2>
           <p className="text-xs sm:text-sm text-[#475569] font-medium leading-relaxed font-body max-w-2xl mx-auto">
-            Real experiences from patients who trusted Pure Smile Clinic for their dental care. Read genuine feedback about treatment quality, comfort, and patient experience.
+            Real experiences from patients who trusted SmileCare Clinic for their dental care. Read genuine feedback about treatment quality, comfort, and patient experience.
           </p>
         </motion.div>
 
@@ -160,7 +160,7 @@ export default function Testimonials() {
               </div>
               <div>
                 <span className="text-[10px] font-sans font-black tracking-widest text-[#237FE3] uppercase">Verified Google Profile</span>
-                <p className="text-[11px] font-bold text-slate-800">Pure Smile Clinic</p>
+                <p className="text-[11px] font-bold text-slate-800">SmileCare Clinic</p>
               </div>
             </div>
             

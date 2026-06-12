@@ -32,7 +32,7 @@ const faqs = [
     answer: 'To maintain a pristine, healthy smile, we recommend a routine professional checkup, cleaning, and scale treatment and polishing every 6 months. This preventive care is the best way to catch minor issues before they require advanced procedures.'
   },
   {
-    question: 'Why do patients choose Pure Smile Clinic?',
+    question: 'Why do patients choose SmileCare Clinic?',
     answer: 'Patients choose us for experienced doctors, modern technology, transparent treatment planning, comfortable procedures, and personalized care focused on long-term oral health.'
   }
 ];

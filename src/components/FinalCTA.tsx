@@ -29,7 +29,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xs sm:text-sm lg:text-base text-slate-300 leading-relaxed font-sans max-w-2xl mx-auto mb-6 antialiased"
         >
-          Join 12,000+ happy patients who trust Pure Smile Clinic, Dehradun for advanced dental care, experienced specialists, personalized treatment plans, and comfortable patient experiences.
+          Join 12,000+ happy patients who trust SmileCare Clinic, Dehradun for advanced dental care, experienced specialists, personalized treatment plans, and comfortable patient experiences.
         </motion.p>
 
         {/* Premium Trust Strip with separators */}

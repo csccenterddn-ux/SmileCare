@@ -69,7 +69,7 @@ export default function AboutUs() {
               <div className="overflow-hidden h-[450px]">
                 <motion.img 
                   src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" 
-                  alt="Modern Pure Smile dental clinic room and professional dentist treatment" 
+                  alt="Modern SmileCare dental clinic room and professional dentist treatment" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 />
@@ -121,7 +121,7 @@ export default function AboutUs() {
 
             {/* main titles heading and explanation paragraph */}
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] lg:leading-[1.12] font-heading font-extrabold text-[#0A2540] tracking-tight mb-4">
-              Why Dehradun Families Trust Pure Smile Clinic
+              Why Dehradun Families Trust SmileCare Clinic
             </h2>
             
             <p className="text-sm sm:text-base text-[#475569] font-normal leading-relaxed font-sans mb-8 antialiased">

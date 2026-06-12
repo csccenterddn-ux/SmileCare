@@ -197,7 +197,7 @@ export default function Gallery() {
   const displayedItems = filteredItems.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   const isBeforeAfter = activeTab === 'before-after';
-  const headingText = isBeforeAfter ? 'Smile Transformations' : 'Inside Pure Smile Clinic';
+  const headingText = isBeforeAfter ? 'Smile Transformations' : 'Inside SmileCare Clinic';
   const descriptionText = isBeforeAfter 
     ? 'Witness the breathtaking results of our specialized cosmetic and orthodontic treatments designed to restore confidence.'
     : 'Explore our modern dental facility, advanced technology, and patient-focused environment designed for comfort, safety, and exceptional care.';
@@ -376,10 +376,10 @@ export default function Gallery() {
                   </div>
                 </div>
 
-                {/* Pure Minimalist Action/Details bottom frame */}
+                {/* SmileCare Minimalist Action/Details bottom frame */}
                 <div className="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-2">
                   <span className="text-xs text-[#0A2540] font-sans font-bold">
-                    Pure Smile Clinic • Premium Dental Care
+                    SmileCare Clinic • Premium Dental Care
                   </span>
                   <a 
                     href="#book"
