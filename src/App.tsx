@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 import Toast from './components/Toast';
 import Chatbot from './components/Chatbot';
 import BookingModal from './components/BookingModal';
+import SEOMeta from './components/SEOMeta';
 import { useTreatment } from './context/TreatmentContext';
 
 import { Phone, Calendar } from 'lucide-react';
@@ -176,6 +177,9 @@ export default function App() {
   return (
     <div className="relative min-h-screen bg-white text-text-dark flex flex-col justify-between overflow-x-hidden">
       
+      {/* Dynamic SEO Meta Tags (React 19 native document metadata hoisting) */}
+      <SEOMeta />
+
       {/* Sticky Blue-blur top Header */}
       <Header />
 
