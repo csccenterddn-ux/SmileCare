@@ -4,10 +4,10 @@ import { Phone, Check, Calendar } from 'lucide-react';
 
 export default function FinalCTA() {
   return (
-    <section id="final-cta" className="relative bg-[#0A2540] overflow-hidden py-12 md:py-15 px-4 sm:px-6 lg:px-8 border-t border-sky-950">
+    <section id="final-cta" className="relative bg-[#0A1F44] overflow-hidden py-12 md:py-15 px-4 sm:px-6 lg:px-8 border-t border-sky-950">
       {/* Premium Ambient Visual Blur Overlays */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#237FE3]/15 rounded-full blur-3xl pointer-events-none -translate-x-1/3 -translate-y-1/3" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#69B2FF]/10 rounded-full blur-3xl pointer-events-none translate-x-1/3 translate-y-1/3" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#3B82F6]/15 rounded-full blur-3xl pointer-events-none -translate-x-1/3 -translate-y-1/3" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#4F87FB]/10 rounded-full blur-3xl pointer-events-none translate-x-1/3 translate-y-1/3" />
       
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {/* Main Heading */}
@@ -42,28 +42,28 @@ export default function FinalCTA() {
         >
           <div className="flex flex-col sm:flex-row flex-wrap md:flex-nowrap items-center justify-center gap-x-5 gap-y-3 md:gap-y-0 text-[11px] font-sans font-bold uppercase tracking-wider text-slate-200">
             <span className="flex items-center gap-2">
-              <span className="w-4 h-4 rounded-full bg-[#237FE3]/10 border border-[#237FE3]/30 flex items-center justify-center text-[#69B2FF]">
+              <span className="w-4 h-4 rounded-full bg-[#3B82F6]/10 border border-[#3B82F6]/30 flex items-center justify-center text-[#4F87FB]">
                 <Check className="w-2.5 h-2.5 stroke-[3]" />
               </span>
               <span>15+ Years Experience</span>
             </span>
             <span className="hidden md:inline text-white/10 font-light text-base">|</span>
             <span className="flex items-center gap-2">
-              <span className="w-4 h-4 rounded-full bg-[#237FE3]/10 border border-[#237FE3]/30 flex items-center justify-center text-[#69B2FF]">
+              <span className="w-4 h-4 rounded-full bg-[#3B82F6]/10 border border-[#3B82F6]/30 flex items-center justify-center text-[#4F87FB]">
                 <Check className="w-2.5 h-2.5 stroke-[3]" />
               </span>
               <span>12,000+ Patients Treated</span>
             </span>
             <span className="hidden md:inline text-white/10 font-light text-base">|</span>
             <span className="flex items-center gap-2">
-              <span className="w-4 h-4 rounded-full bg-[#237FE3]/10 border border-[#237FE3]/30 flex items-center justify-center text-[#69B2FF]">
+              <span className="w-4 h-4 rounded-full bg-[#3B82F6]/10 border border-[#3B82F6]/30 flex items-center justify-center text-[#4F87FB]">
                 <Check className="w-2.5 h-2.5 stroke-[3]" />
               </span>
               <span>Advanced Digital Dentistry</span>
             </span>
             <span className="hidden md:inline text-white/10 font-light text-base">|</span>
             <span className="flex items-center gap-2">
-              <span className="w-4 h-4 rounded-full bg-[#237FE3]/10 border border-[#237FE3]/30 flex items-center justify-center text-[#69B2FF]">
+              <span className="w-4 h-4 rounded-full bg-[#3B82F6]/10 border border-[#3B82F6]/30 flex items-center justify-center text-[#4F87FB]">
                 <Check className="w-2.5 h-2.5 stroke-[3]" />
               </span>
               <span>Easy Appointment Booking</span>
@@ -81,16 +81,16 @@ export default function FinalCTA() {
         >
           <a 
             href="#book"
-            className="w-full sm:w-auto px-8 py-3 bg-[#237FE3] hover:bg-[#69B2FF] text-white font-sans font-bold text-xs sm:text-sm rounded-full shadow-lg shadow-[#237FE3]/15 hover:shadow-xl hover:scale-[1.01] active:scale-[0.98] transition-all duration-300 text-center select-none cursor-pointer inline-flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-3 bg-[#4F87FB] hover:bg-[#3B78F0] text-white font-sans font-bold text-xs sm:text-sm rounded-full shadow-lg shadow-[#4F87FB]/15 hover:shadow-xl hover:scale-[1.01] active:scale-[0.98] transition-all duration-300 text-center select-none cursor-pointer inline-flex items-center justify-center gap-2"
           >
             <Calendar className="w-4 h-4" />
             Book Appointment
           </a>
           <a 
             href="tel:+919876543210"
-            className="w-full sm:w-auto px-8 py-3 border border-white/20 hover:border-[#69B2FF] hover:text-white text-white font-sans font-bold text-xs sm:text-sm rounded-full bg-white/5 hover:bg-white/10 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 select-none cursor-pointer"
+            className="w-full sm:w-auto px-8 py-3 border border-white/20 hover:border-[#4F87FB] hover:text-white text-white font-sans font-bold text-xs sm:text-sm rounded-full bg-white/5 hover:bg-white/10 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 select-none cursor-pointer"
           >
-            <Phone className="w-4 h-4 text-[#69B2FF]" />
+            <Phone className="w-4 h-4 text-[#4F87FB]" />
             Call Now
           </a>
         </motion.div>

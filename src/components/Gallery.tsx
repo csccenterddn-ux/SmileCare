@@ -207,10 +207,10 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto text-center">
         
         {/* Section Header */}
-        <span className="text-xs font-bold tracking-widest text-[#237FE3] uppercase bg-[#F4F9FF] border border-[#BFD9FF]/60 px-4 py-1.5 rounded-full inline-block mb-3.5 shadow-sm select-none">
+        <span className="text-xs font-bold tracking-widest text-[#3B82F6] uppercase bg-[#F7FAFC] border border-[#D8E5FF]/60 px-4 py-1.5 rounded-full inline-block mb-3.5 shadow-sm select-none">
           CLINIC GALLERY
         </span>
-        <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#0A2540] tracking-tight leading-tight mb-4">
+        <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#0A1F44] tracking-tight leading-tight mb-4">
           {headingText}
         </h2>
         <p className="text-base text-[#475569] font-medium leading-relaxed font-sans max-w-2xl mx-auto mb-10 antialiased">
@@ -226,8 +226,8 @@ export default function Gallery() {
               onClick={() => setActiveTab(tab.id)}
               className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all relative select-none cursor-pointer ${
                 activeTab === tab.id
-                  ? 'bg-[#237FE3] text-white shadow-md shadow-[#237FE3]/20 scale-[1.03]'
-                  : 'bg-white text-[#475569] border border-[#E2E8F0] hover:border-[#237FE3] hover:text-[#237FE3]'
+                  ? 'bg-[#3B82F6] text-white shadow-md shadow-[#3B82F6]/20 scale-[1.03]'
+                  : 'bg-white text-[#475569] border border-[#E2E8F0] hover:border-[#3B82F6] hover:text-[#3B82F6]'
               }`}
             >
               {tab.label}
@@ -266,8 +266,8 @@ export default function Gallery() {
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center" />
                   
                   {/* Subtle Hover Action Pill Icon */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md text-[#0A2540] p-4 rounded-full scale-75 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 shadow-md">
-                    <Eye className="w-5 h-5 text-[#237FE3]" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md text-[#0A1F44] p-4 rounded-full scale-75 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                    <Eye className="w-5 h-5 text-[#3B82F6]" />
                   </div>
                 </div>
 
@@ -283,7 +283,7 @@ export default function Gallery() {
               type="button"
               onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
               disabled={currentPage === 1}
-              className="p-3 bg-white border border-[#E2E8F0] text-[#0A2540] hover:text-[#237FE3] disabled:opacity-30 disabled:hover:text-[#0A2540] rounded-full shadow-sm transition-all duration-300 hover:border-[#237FE3] cursor-pointer disabled:cursor-not-allowed"
+              className="p-3 bg-white border border-[#E2E8F0] text-[#0A1F44] hover:text-[#3B82F6] disabled:opacity-30 disabled:hover:text-[#0A1F44] rounded-full shadow-sm transition-all duration-300 hover:border-[#3B82F6] cursor-pointer disabled:cursor-not-allowed"
               aria-label="Previous Page"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -296,8 +296,8 @@ export default function Gallery() {
                   onClick={() => setCurrentPage(i + 1)}
                   className={`w-8 h-8 rounded-full text-xs font-bold transition-all ${
                     currentPage === i + 1
-                      ? 'bg-[#237FE3] text-white shadow-sm'
-                      : 'bg-white text-[#475569] border border-[#E2E8F0] hover:border-[#237FE3]'
+                      ? 'bg-[#3B82F6] text-white shadow-sm'
+                      : 'bg-white text-[#475569] border border-[#E2E8F0] hover:border-[#3B82F6]'
                   }`}
                 >
                   {i + 1}
@@ -308,7 +308,7 @@ export default function Gallery() {
               type="button"
               onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
               disabled={currentPage === totalPages}
-              className="p-3 bg-white border border-[#E2E8F0] text-[#0A2540] hover:text-[#237FE3] disabled:opacity-30 disabled:hover:text-[#0A2540] rounded-full shadow-sm transition-all duration-300 hover:border-[#237FE3] cursor-pointer disabled:cursor-not-allowed"
+              className="p-3 bg-white border border-[#E2E8F0] text-[#0A1F44] hover:text-[#3B82F6] disabled:opacity-30 disabled:hover:text-[#0A1F44] rounded-full shadow-sm transition-all duration-300 hover:border-[#3B82F6] cursor-pointer disabled:cursor-not-allowed"
               aria-label="Next Page"
             >
               <ChevronRight className="w-5 h-5" />
@@ -318,21 +318,21 @@ export default function Gallery() {
 
         {/* Compact luxury trust strip below the gallery */}
         <div className="border-t border-b border-[#E2E8F0] mt-16 py-8 select-none bg-white rounded-3xl px-4 sm:px-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3.5 text-xs text-[#0A2540] font-sans font-bold">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3.5 text-xs text-[#0A1F44] font-sans font-bold">
             <span className="flex items-center gap-2">
-              <Check className="w-4.5 h-4.5 text-[#237FE3] stroke-[3.5] bg-[#F4F9FF] rounded-full p-0.5" />
+              <Check className="w-4.5 h-4.5 text-[#4F87FB] stroke-[3.5] bg-[#F7FAFC] rounded-full p-0.5" />
               15+ Years Experience
             </span>
             <span className="flex items-center gap-2">
-              <Check className="w-4.5 h-4.5 text-[#237FE3] stroke-[3.5] bg-[#F4F9FF] rounded-full p-0.5" />
+              <Check className="w-4.5 h-4.5 text-[#4F87FB] stroke-[3.5] bg-[#F7FAFC] rounded-full p-0.5" />
               12,000+ Happy Patients
             </span>
             <span className="flex items-center gap-2">
-              <Check className="w-4.5 h-4.5 text-[#237FE3] stroke-[3.5] bg-[#F4F9FF] rounded-full p-0.5" />
+              <Check className="w-4.5 h-4.5 text-[#4F87FB] stroke-[3.5] bg-[#F7FAFC] rounded-full p-0.5" />
               Advanced Digital Technology
             </span>
             <span className="flex items-center gap-2">
-              <Check className="w-4.5 h-4.5 text-[#237FE3] stroke-[3.5] bg-[#F4F9FF] rounded-full p-0.5" />
+              <Check className="w-4.5 h-4.5 text-[#4F87FB] stroke-[3.5] bg-[#F7FAFC] rounded-full p-0.5" />
               Class-B Sterilization
             </span>
           </div>
@@ -378,13 +378,13 @@ export default function Gallery() {
 
                 {/* SmileCare Minimalist Action/Details bottom frame */}
                 <div className="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-2">
-                  <span className="text-xs text-[#0A2540] font-sans font-bold">
+                  <span className="text-xs text-[#0A1F44] font-sans font-bold">
                     SmileCare Clinic • Premium Dental Care
                   </span>
                   <a 
                     href="#book"
                     onClick={() => setLightboxItem(null)}
-                    className="px-6 py-2.5 bg-[#237FE3] hover:bg-[#69B2FF] text-white font-sans font-bold text-xs rounded-full shadow-md text-center transition-colors inline-flex items-center justify-center gap-2"
+                    className="px-6 py-2.5 bg-[#4F87FB] hover:bg-[#3B78F0] text-white font-sans font-bold text-xs rounded-full shadow-md text-center transition-colors inline-flex items-center justify-center gap-2"
                   >
                     <Calendar className="w-4 h-4" />
                     Schedule Free Consultation

@@ -24,25 +24,25 @@ export default function Hero() {
     <section 
       id="home" 
       className="relative min-h-[95vh] lg:min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-24 px-4 sm:px-6 lg:px-8"
-      style={{ background: 'linear-gradient(135deg, #0B2240 0%, #10385D 50%, #0F5A75 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #0A1F44 0%, #102B59 50%, #153973 100%)' }}
     >
       {/* LAYER 2: Subtle Abstract Shapes (3%-6% Opacity) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
         {/* Soft curved organic shape 1 in top-right - Animate Left/Right (10px-20px range, 20-40s duration) */}
         <motion.div 
-          className="absolute -top-[15%] -right-[10%] w-[70vw] h-[70vw] rounded-full bg-[#1e4f8a] opacity-[0.05] filter blur-[120px]" 
+          className="absolute -top-[15%] -right-[10%] w-[70vw] h-[70vw] rounded-full bg-[#153973] opacity-[0.05] filter blur-[120px]" 
           animate={{ x: [-15, 15, -15] }}
           transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Soft organic wave blob in bottom-left - Animate Up/Down (10px-20px range, 20-40s duration) */}
         <motion.div 
-          className="absolute -bottom-[20%] -left-[10%] w-[60vw] h-[60vw] rounded-full bg-[#237FE3] opacity-[0.04] filter blur-[140px]" 
+          className="absolute -bottom-[20%] -left-[10%] w-[60vw] h-[60vw] rounded-full bg-[#3B82F6] opacity-[0.04] filter blur-[140px]" 
           animate={{ y: [-15, 15, -15] }}
           transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Gentle deep organic shape in middle-left - Compound smooth movement */}
         <motion.div 
-          className="absolute top-[25%] -left-[20%] w-[50vw] h-[50vw] rounded-[180px_90px_240px_120px] bg-[#1a4b7c] rotate-12 opacity-[0.04] filter blur-[110px]" 
+          className="absolute top-[25%] -left-[20%] w-[50vw] h-[50vw] rounded-[180px_90px_240px_120px] bg-[#102B59] rotate-12 opacity-[0.04] filter blur-[110px]" 
           animate={{ x: [-10, 10, -10], y: [10, -10, 10] }}
           transition={{ duration: 40, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -55,17 +55,17 @@ export default function Hero() {
       >
         {/* Top Left: Deep Navy Glow */}
         <div 
-          className="absolute top-0 left-0 w-[55vw] h-[55vw] bg-[#0A2540] filter blur-[120px]" 
+          className="absolute top-0 left-0 w-[55vw] h-[55vw] bg-[#0A1F44] filter blur-[120px]" 
         />
         {/* Center: Soft Blue Glow shifting slowly (15-25 seconds) */}
         <motion.div 
-          className="absolute top-[20%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-[#4285F4] filter blur-[150px]" 
+          className="absolute top-[20%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-[#4F87FB] filter blur-[150px]" 
           animate={{ x: [-20, 20, -20], y: [-15, 15, -15] }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Bottom Right: Very Subtle Emerald Glow shifting slowly (15-25 seconds) */}
         <motion.div 
-          className="absolute bottom-0 right-0 w-[50vw] h-[50vw] rounded-full bg-[#237FE3] filter blur-[130px]" 
+          className="absolute bottom-0 right-0 w-[50vw] h-[50vw] rounded-full bg-[#3B82F6] filter blur-[130px]" 
           animate={{ x: [15, -15, 15], y: [15, -15, 15] }}
           transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -73,7 +73,7 @@ export default function Hero() {
 
       {/* Premium Subtle Grid Texture Overlay */}
       <div className="absolute inset-0 opacity-[0.07] pointer-events-none z-0" style={{
-        backgroundImage: `radial-gradient(ellipse at center, rgba(35, 127, 227, 0.12), transparent 75%),
+        backgroundImage: `radial-gradient(ellipse at center, rgba(59, 130, 246, 0.12), transparent 75%),
                           linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), 
                           linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px)`,
         backgroundSize: '100% 100%, 50px 50px, 50px 50px'
@@ -84,7 +84,7 @@ export default function Hero() {
         {particles.map(p => (
           <motion.div
             key={p.id}
-            className="absolute rounded-full bg-[#237FE3] pointer-events-none"
+            className="absolute rounded-full bg-[#3B82F6] pointer-events-none"
             initial={{ y: 0, opacity: p.opacity }}
             animate={{ y: [0, p.yShift, 0], opacity: [p.opacity, p.opacity * 0.6, p.opacity] }}
             transition={{
@@ -142,7 +142,7 @@ export default function Hero() {
                   <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22-.04-.63z"/>
                   <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
                 </svg>
-                <span className="text-[#69B2FF] font-bold text-[12px] tracking-wide">Google Rating</span>
+                <span className="text-[#4F87FB] font-bold text-[12px] tracking-wide">Google Rating</span>
               </div>
               <span className="text-[rgba(255,255,255,0.35)] hidden sm:inline">|</span>
               <span className="font-bold text-white hidden sm:inline">12,000+ Happy Patients</span>
@@ -159,7 +159,7 @@ export default function Hero() {
           >
             Modern Dental Care{" "}
             <br className="hidden lg:block" />
-            <span className="text-[#3D9BFF]">
+            <span className="text-[#4F87FB]">
               For Healthy & Confident Smiles
             </span>
           </motion.h1>
@@ -169,7 +169,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-            className="text-base sm:text-lg text-[rgba(255,255,255,0.88)] max-w-[580px] mb-5.5 leading-[1.8] font-sans font-normal"
+            className="text-base sm:text-lg text-[rgba(255,255,255,0.85)] max-w-[580px] mb-5.5 leading-[1.8] font-sans font-normal"
           >
             Experience personalized dental care powered by advanced technology, precise diagnostics, and evidence-based treatments designed for healthier, more confident smiles.
           </motion.p>
@@ -186,7 +186,7 @@ export default function Hero() {
               href="#book" 
               whileHover={{ y: -2, scale: 1.02 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-[999px] bg-[#237FE3] text-white font-sans font-bold text-sm tracking-wide shadow-[0_10px_25px_rgba(35,127,227,0.2)] hover:bg-[#69B2FF] hover:shadow-[0_20px_35px_rgba(105,178,255,0.45),_0_0_15px_rgba(105,178,255,0.3)] transition-all duration-300 transform"
+              className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-[999px] bg-[#4F87FB] text-white font-sans font-bold text-sm tracking-wide shadow-[0_10px_25px_rgba(79,135,251,0.2)] hover:bg-[#3B78F0] hover:shadow-[0_20px_35px_rgba(59,120,240,0.45),_0_0_15px_rgba(59,120,240,0.3)] transition-all duration-300 transform"
             >
               <Calendar className="w-4 h-4 transition-transform group-hover:scale-110" />
               Book Appointment
@@ -200,7 +200,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               whileHover={{ y: -2, scale: 1.02 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-[999px] bg-white/5 text-white border border-white/10 hover:border-[#25D366] hover:bg-white/10 hover:shadow-[0_8px_25px_rgba(37,211,102,0.3),_0_0_15px_rgba(37,211,102,0.2)] transition-all duration-300 font-sans font-semibold text-sm transform"
+              className="group inline-flex items-center gap-2.5 px-7 py-4 rounded-[999px] bg-transparent text-white border border-white/20 hover:border-[#4F87FB] hover:bg-white/5 hover:shadow-[0_8px_25px_rgba(79,135,251,0.2),_0_0_15px_rgba(79,135,251,0.15)] transition-all duration-300 font-sans font-semibold text-sm transform"
             >
               <svg 
                 className="w-4.5 h-4.5 text-[#25D366] fill-[#25D366] transition-transform duration-300 group-hover:scale-110" 
@@ -221,26 +221,26 @@ export default function Hero() {
             className="hidden sm:grid grid-cols-2 gap-y-2.5 gap-x-5 max-w-[550px] border-b border-white/10 pb-5 mb-5.5"
           >
             <div className="flex items-center gap-2 text-slate-100 text-xs sm:text-[13px] font-sans font-semibold tracking-wide">
-              <div className="w-4 h-4 rounded-full bg-[#237FE3]/15 flex items-center justify-center border border-[#237FE3]/30 shrink-0">
-                <Check className="w-2.5 h-2.5 text-[#237FE3] stroke-[3]" />
+              <div className="w-4 h-4 rounded-full bg-[#3B82F6]/15 flex items-center justify-center border border-[#3B82F6]/30 shrink-0">
+                <Check className="w-2.5 h-2.5 text-[#4F87FB] stroke-[3]" />
               </div>
               <span>15+ Years Experience</span>
             </div>
             <div className="flex items-center gap-2 text-slate-100 text-xs sm:text-[13px] font-sans font-semibold tracking-wide">
-              <div className="w-4 h-4 rounded-full bg-[#237FE3]/15 flex items-center justify-center border border-[#237FE3]/30 shrink-0">
-                <Check className="w-2.5 h-2.5 text-[#237FE3] stroke-[3]" />
+              <div className="w-4 h-4 rounded-full bg-[#3B82F6]/15 flex items-center justify-center border border-[#3B82F6]/30 shrink-0">
+                <Check className="w-2.5 h-2.5 text-[#4F87FB] stroke-[3]" />
               </div>
               <span>12,000+ Happy Patients</span>
             </div>
             <div className="flex items-center gap-2 text-slate-100 text-xs sm:text-[13px] font-sans font-semibold tracking-wide">
-              <div className="w-4 h-4 rounded-full bg-[#237FE3]/15 flex items-center justify-center border border-[#237FE3]/30 shrink-0">
-                <Check className="w-2.5 h-2.5 text-[#237FE3] stroke-[3]" />
+              <div className="w-4 h-4 rounded-full bg-[#3B82F6]/15 flex items-center justify-center border border-[#3B82F6]/30 shrink-0">
+                <Check className="w-2.5 h-2.5 text-[#4F87FB] stroke-[3]" />
               </div>
               <span>ISO Certified Clinic</span>
             </div>
             <div className="flex items-center gap-2 text-slate-100 text-xs sm:text-[13px] font-sans font-semibold tracking-wide">
-              <div className="w-4 h-4 rounded-full bg-[#237FE3]/15 flex items-center justify-center border border-[#237FE3]/30 shrink-0">
-                <Check className="w-2.5 h-2.5 text-[#237FE3] stroke-[3]" />
+              <div className="w-4 h-4 rounded-full bg-[#3B82F6]/15 flex items-center justify-center border border-[#3B82F6]/30 shrink-0">
+                <Check className="w-2.5 h-2.5 text-[#4F87FB] stroke-[3]" />
               </div>
               <span>Same Day Emergency Care</span>
             </div>
@@ -254,20 +254,20 @@ export default function Hero() {
             className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-5 sm:gap-8 max-w-[620px]"
           >
             <div className="flex flex-col text-left">
-              <span className="text-3xl sm:text-[2.5rem] font-heading font-black text-[#69B2FF] leading-none mb-1.5">15+</span>
-              <span className="text-[10.5px] text-[#D7E7FF] tracking-wider font-extrabold uppercase leading-tight">YEARS OF TRUSTED CARE</span>
+              <span className="text-3xl sm:text-[2.5rem] font-heading font-black text-[#4F87FB] leading-none mb-1.5">15+</span>
+              <span className="text-[10.5px] text-[rgba(255,255,255,0.73)] tracking-wider font-extrabold uppercase leading-tight">YEARS OF TRUSTED CARE</span>
             </div>
             <div className="flex flex-col text-left">
-              <span className="text-3xl sm:text-[2.5rem] font-heading font-black text-[#69B2FF] leading-none mb-1.5">12K+</span>
-              <span className="text-[10.5px] text-[#D7E7FF] tracking-wider font-extrabold uppercase leading-tight">SMILES RESTORED</span>
+              <span className="text-3xl sm:text-[2.5rem] font-heading font-black text-[#4F87FB] leading-none mb-1.5">12K+</span>
+              <span className="text-[10.5px] text-[rgba(255,255,255,0.73)] tracking-wider font-extrabold uppercase leading-tight">SMILES RESTORED</span>
             </div>
             <div className="flex flex-col text-left">
-              <span className="text-3xl sm:text-[2.5rem] font-heading font-black text-[#69B2FF] leading-none mb-1.5">4.9★</span>
-              <span className="text-[10.5px] text-[#D7E7FF] tracking-wider font-extrabold uppercase leading-tight">GOOGLE RATING</span>
+              <span className="text-3xl sm:text-[2.5rem] font-heading font-black text-[#4F87FB] leading-none mb-1.5">4.9★</span>
+              <span className="text-[10.5px] text-[rgba(255,255,255,0.73)] tracking-wider font-extrabold uppercase leading-tight">GOOGLE RATING</span>
             </div>
             <div className="flex flex-col text-left">
-              <span className="text-3xl sm:text-[2.5rem] font-heading font-black text-[#69B2FF] leading-none mb-1.5">2,400+</span>
-              <span className="text-[10.5px] text-[#D7E7FF] tracking-wider font-extrabold uppercase leading-tight">VERIFIED REVIEWS</span>
+              <span className="text-3xl sm:text-[2.5rem] font-heading font-black text-[#4F87FB] leading-none mb-1.5">2,400+</span>
+              <span className="text-[10.5px] text-[rgba(255,255,255,0.73)] tracking-wider font-extrabold uppercase leading-tight">VERIFIED REVIEWS</span>
             </div>
           </motion.div>
         </div>
@@ -290,7 +290,7 @@ export default function Hero() {
               referrerPolicy="no-referrer"
             />
             {/* Premium darkened bottom & top shading gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/80 via-transparent to-black/30 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F44]/80 via-transparent to-black/30 pointer-events-none" />
           </motion.div>
 
           {/* Floating Card A: Dr. Amit Sharma MDS Orthodontics (Top-Left Authority Card) */}
@@ -312,30 +312,30 @@ export default function Hero() {
                   <img 
                      src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                      alt="Dr. Amit Sharma" 
-                     className="w-11 h-11 rounded-full border-2 border-[#3D9BFF] object-cover shadow-sm bg-slate-100" 
+                     className="w-11 h-11 rounded-full border-2 border-[#4F87FB] object-cover shadow-sm bg-slate-100" 
                      referrerPolicy="no-referrer"
                    />
-                   <span className="absolute bottom-0 right-0 w-3 h-3 bg-[#3D9BFF] border border-white rounded-full flex items-center justify-center">
+                   <span className="absolute bottom-0 right-0 w-3 h-3 bg-[#4F87FB] border border-white rounded-full flex items-center justify-center">
                      <Check className="w-1.5 h-1.5 text-white stroke-[4]" />
                    </span>
                  </div>
                  <div className="min-w-0">
-                   <h4 className="text-sm sm:text-base font-extrabold text-[#0A2540] tracking-tight leading-tight truncate">Dr. Amit Sharma</h4>
-                   <p className="text-[10px] sm:text-[11px] text-[#3D9BFF] font-bold uppercase tracking-wider mt-0.5 leading-none">MDS Orthodontics</p>
+                   <h4 className="text-sm sm:text-base font-extrabold text-[#0A1F44] tracking-tight leading-tight truncate">Dr. Amit Sharma</h4>
+                   <p className="text-[10px] sm:text-[11px] text-[#4F87FB] font-bold uppercase tracking-wider mt-0.5 leading-none">MDS Orthodontics</p>
                  </div>
                </div>
                
                <div className="border-t border-[#E2E8F0] pt-3 space-y-2">
                  <div className="flex items-center gap-2 text-[10.5px] text-[#1E293B] font-semibold leading-none">
-                   <div className="w-1.5 h-1.5 rounded-full bg-[#3D9BFF] shrink-0" />
+                   <div className="w-1.5 h-1.5 rounded-full bg-[#4F87FB] shrink-0" />
                    <span className="truncate">15+ Years Experience</span>
                  </div>
                  <div className="flex items-center gap-2 text-[10.5px] text-[#1E293B] font-semibold leading-none">
-                   <div className="w-1.5 h-1.5 rounded-full bg-[#3D9BFF] shrink-0" />
+                   <div className="w-1.5 h-1.5 rounded-full bg-[#4F87FB] shrink-0" />
                    <span className="truncate">12,000+ Patients Treated</span>
                  </div>
-                 <div className="flex items-center gap-1.5 text-[10px] text-[#3D9BFF] font-extrabold tracking-wider uppercase leading-none pt-1">
-                   <Shield className="w-4 h-4 text-[#3D9BFF] fill-[#3D9BFF]/10 shrink-0 stroke-[2.5]" />
+                 <div className="flex items-center gap-1.5 text-[10px] text-[#4F87FB] font-extrabold tracking-wider uppercase leading-none pt-1">
+                   <Shield className="w-4 h-4 text-[#3B82F6] fill-[#3B82F6]/10 shrink-0 stroke-[2.5]" />
                    <span className="truncate">Verified Specialist</span>
                  </div>
                </div>
@@ -356,11 +356,11 @@ export default function Hero() {
               className="bg-white rounded-2xl p-4.5 border border-[#E2E8F0] flex items-center gap-3.5 max-w-[250px] text-left select-none transition-all duration-300 cursor-default"
               style={{ boxShadow: '0 10px 30px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.08)' }}
             >
-              <div className="w-11 h-11 rounded-xl bg-[#F4F9FF] border border-[#BFD9FF] flex items-center justify-center shadow-inner shrink-0">
-                <Award className="w-[22px] h-[22px] text-[#3D9BFF]" />
+              <div className="w-11 h-11 rounded-xl bg-[#F7FAFC] border border-[#D8E5FF] flex items-center justify-center shadow-inner shrink-0">
+                <Award className="w-[22px] h-[22px] text-[#3B82F6]" />
               </div>
               <div className="text-left">
-                <h4 className="text-xs font-bold text-[#0A2540] tracking-tight">Pain-Free Treatment</h4>
+                <h4 className="text-xs font-bold text-[#0A1F44] tracking-tight">Pain-Free Treatment</h4>
                 <p className="text-[10px] text-[#64748B] mt-0.5 font-medium">Advanced Digital Dentistry</p>
               </div>
             </motion.div>

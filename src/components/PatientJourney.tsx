@@ -42,10 +42,10 @@ export default function PatientJourney() {
         
         {/* Intro */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-          <span className="text-[10px] font-sans font-extrabold tracking-widest text-[#237FE3] uppercase bg-[#F4F9FF] border border-[#BFD9FF] px-3.5 py-1 rounded-full inline-block mb-3 shadow-[0_1px_2px_rgba(35,127,227,0.03)] select-none">
+          <span className="text-[10px] font-sans font-extrabold tracking-widest text-[#3B82F6] uppercase bg-[#F7FAFC] border border-[#D8E5FF]/60 px-3.5 py-1 rounded-full inline-block mb-3 shadow-[0_1px_2px_rgba(59,130,246,0.03)] select-none">
             Your Experience
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-[#0A1628] tracking-tight leading-tight mb-2.5">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-[#0A1F44] tracking-tight leading-tight mb-2.5">
             Your Journey To A Healthier Smile
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed font-body max-w-xl mx-auto">
@@ -56,7 +56,7 @@ export default function PatientJourney() {
         {/* Dynamic Road Steps Grid */}
         <div className="relative mt-2">
           {/* Subtle Premium Connector Line - Desktop Only. Center aligned with circles */}
-          <div className="hidden lg:block absolute top-[80px] left-[10%] right-[10%] h-[1.5px] bg-[#237FE3]/15 z-0" />
+          <div className="hidden lg:block absolute top-[80px] left-[10%] right-[10%] h-[1.5px] bg-[#3B82F6]/15 z-0" />
           
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 relative z-10 items-stretch">
             {stepsData.map((item, idx) => {
@@ -68,20 +68,20 @@ export default function PatientJourney() {
                    whileInView={{ opacity: 1, y: 0 }}
                    viewport={{ once: true }}
                    transition={{ duration: 0.4, delay: idx * 0.06 }}
-                   className="flex flex-col items-center text-center group bg-white border border-[#E2E8F0] hover:border-[#237FE3]/40 rounded-3xl p-5 sm:p-5.5 shadow-[0_4px_15px_rgba(15,23,42,0.01)] hover:shadow-[0_12px_30px_rgba(35,127,227,0.05)] hover:translate-y-[-4px] transition-all duration-300 relative h-full"
+                   className="flex flex-col items-center text-center group bg-white border border-[#E2E8F0] hover:border-[#3B82F6]/40 rounded-3xl p-5 sm:p-5.5 shadow-[0_4px_15px_rgba(15,23,42,0.01)] hover:shadow-[0_12px_30px_rgba(59,130,246,0.05)] hover:translate-y-[-4px] transition-all duration-300 relative h-full"
                  >
                    {/* Step indicator badge */}
-                   <span className="text-[10px] font-sans font-extrabold tracking-wider text-[#237FE3] bg-[#F4F9FF] border border-[#BFD9FF] px-2.5 py-0.5 rounded-full inline-block mb-3.5 select-none font-bold">
+                   <span className="text-[10px] font-sans font-extrabold tracking-wider text-[#3B82F6] bg-[#F7FAFC] border border-[#D8E5FF]/60 px-2.5 py-0.5 rounded-full inline-block mb-3.5 select-none font-bold">
                      {item.step}
                    </span>
 
                    {/* Step visual circle - soft circular background with blue icon */}
-                   <div className="w-12 h-12 rounded-full bg-[#F4F9FF] border border-[#BFD9FF]/60 group-hover:border-[#237FE3] group-hover:bg-[#237FE3] flex items-center justify-center shadow-[0_2px_6px_rgba(15,23,42,0.02)] group-hover:shadow-[0_6px_16px_rgba(35,127,227,0.12)] group-hover:scale-105 transition-all duration-300 mb-4 shrink-0 relative z-10">
-                     <StepIcon className="w-5 h-5 text-[#237FE3] group-hover:text-white transition-colors duration-300 group-hover:scale-105 transition-transform stroke-[2.25]" />
+                   <div className="w-12 h-12 rounded-full bg-[#F7FAFC] border border-[#D8E5FF]/65 group-hover:border-[#3B82F6] group-hover:bg-[#3B82F6] flex items-center justify-center shadow-[0_2px_6px_rgba(15,23,42,0.02)] group-hover:shadow-[0_6px_16px_rgba(59,130,246,0.12)] group-hover:scale-105 transition-all duration-300 mb-4 shrink-0 relative z-10">
+                     <StepIcon className="w-5 h-5 text-[#3B82F6] group-hover:text-white transition-colors duration-300 group-hover:scale-105 transition-transform stroke-[2.25]" />
                    </div>
 
                    {/* Title and Info */}
-                   <h3 className="text-xs sm:text-sm font-heading font-extrabold text-[#0A1628] mb-1.5 tracking-tight group-hover:text-[#237FE3] transition-colors duration-200 leading-snug">
+                   <h3 className="text-xs sm:text-sm font-heading font-extrabold text-[#0A1F44] mb-1.5 tracking-tight group-hover:text-[#3B82F6] transition-colors duration-200 leading-snug">
                      {item.title}
                    </h3>
                    <p className="text-xs text-slate-500 font-sans font-normal leading-relaxed mb-1 flex-1">
@@ -108,12 +108,12 @@ export default function PatientJourney() {
             ].map((benefit, idx) => (
               <div 
                 key={idx} 
-                className="flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-full bg-white border border-[#E2E8F0] shadow-[0_1px_2px_rgba(15,23,42,0.01)] hover:border-[#237FE3]/20 hover:shadow-[0_4px_10px_rgba(35,127,227,0.03)] hover:translate-y-[-0.5px] transition-all duration-300 shrink-0"
+                className="flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 py-1.5 rounded-full bg-white border border-[#E2E8F0] shadow-[0_1px_2px_rgba(15,23,42,0.01)] hover:border-[#3B82F6]/20 hover:shadow-[0_4px_10px_rgba(59,130,246,0.03)] hover:translate-y-[-0.5px] transition-all duration-300 shrink-0"
               >
-                <div className="w-4 h-4 rounded-full bg-[#F4F9FF] border border-[#BFD9FF] flex items-center justify-center text-[#237FE3] shrink-0">
+                <div className="w-4 h-4 rounded-full bg-[#F7FAFC] border border-[#D8E5FF]/60 flex items-center justify-center text-[#3B82F6] shrink-0">
                   <Check className="w-2.5 h-2.5 stroke-[3.5]" />
                 </div>
-                <span className="text-[11px] sm:text-xs font-bold text-[#0A1628] font-sans tracking-tight whitespace-nowrap">{benefit.text}</span>
+                <span className="text-[11px] sm:text-xs font-bold text-[#0A1F44] font-sans tracking-tight whitespace-nowrap">{benefit.text}</span>
               </div>
             ))}
           </div>

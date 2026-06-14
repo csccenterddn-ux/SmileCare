@@ -50,10 +50,10 @@ export default function FAQSection() {
         
         {/* Title */}
         <div className="text-center mb-12 sm:mb-14">
-          <span className="text-[10px] font-sans font-extrabold tracking-widest text-[#237FE3] uppercase bg-[#F4F9FF] border border-[#BFD9FF]/60 px-3.5 py-1 rounded-full inline-block mb-3 shadow-[0_1px_2px_rgba(35,127,227,0.03)] select-none">
+          <span className="text-[10px] font-sans font-extrabold tracking-widest text-[#3B82F6] uppercase bg-[#F7FAFC] border border-[#D8E5FF]/60 px-3.5 py-1 rounded-full inline-block mb-3 shadow-[0_1px_2px_rgba(59,130,246,0.03)] select-none">
             Common Questions
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-[#0A1628] tracking-tight leading-tight mb-2.5">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-[#0A1F44] tracking-tight leading-tight mb-2.5">
             Frequently Asked Questions
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed font-body max-w-xl mx-auto">
@@ -70,22 +70,22 @@ export default function FAQSection() {
                 key={idx}
                 className={`border rounded-2xl transition-all duration-300 overflow-hidden ${
                   isOpen 
-                    ? 'border-[#237FE3] bg-[#F4F9FF]/40 shadow-[0_4px_16px_rgba(35,127,227,0.03)]' 
-                    : 'border-[#E2E8F0] hover:border-[#237FE3]/40 hover:bg-[#F4F9FF]/10 hover:shadow-[0_3px_10px_rgba(15,23,42,0.008)]'
+                    ? 'border-[#4F87FB] bg-[#F7FAFC]/60 shadow-[0_4px_16px_rgba(79,135,251,0.03)]' 
+                    : 'border-[#E2E8F0] hover:border-[#4F87FB]/40 hover:bg-[#F7FAFC]/30 hover:shadow-[0_3px_10px_rgba(15,23,42,0.008)]'
                 }`}
               >
                 {/* Question Trigger header */}
                 <button
                   type="button"
                   onClick={() => toggleFaq(idx)}
-                  className="flex items-center justify-between w-full px-5 sm:px-6 py-4.5 text-left font-body font-semibold text-[#0A1628] text-sm sm:text-base gap-4 transition-colors duration-200 select-none cursor-pointer"
+                  className="flex items-center justify-between w-full px-5 sm:px-6 py-4.5 text-left font-body font-semibold text-[#0A1F44] text-sm sm:text-base gap-4 transition-colors duration-200 select-none cursor-pointer"
                 >
                   <span className="flex items-center gap-3">
-                    <HelpCircle className={`w-4 h-4 shrink-0 transition-colors duration-200 ${isOpen ? 'text-[#237FE3]' : 'text-[#64748B]'}`} />
-                    <span className="font-heading font-extrabold text-xs sm:text-sm tracking-tight text-[#0A1628]">{faq.question}</span>
+                    <HelpCircle className={`w-4 h-4 shrink-0 transition-colors duration-200 ${isOpen ? 'text-[#3B82F6]' : 'text-[#64748B]'}`} />
+                    <span className="font-heading font-extrabold text-xs sm:text-sm tracking-tight text-[#0A1F44]">{faq.question}</span>
                   </span>
                   <div className={`w-6.5 h-6.5 rounded-full flex items-center justify-center transition-all duration-300 ${
-                    isOpen ? 'bg-[#237FE3] text-white rotate-180 shadow-xs' : 'bg-[#F4F9FF] text-[#237FE3]'
+                    isOpen ? 'bg-[#3B82F6] text-white rotate-180 shadow-xs' : 'bg-[#F7FAFC] text-[#3B82F6]'
                   }`}>
                     <ChevronDown className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
@@ -118,7 +118,7 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-10 p-5 sm:p-7 bg-gradient-to-br from-[#0A2540] to-[#103A63] border border-[#1E3E61] rounded-2.5xl text-center shadow-[0_12px_36px_rgba(10,37,64,0.08)] relative overflow-hidden"
+          className="mt-10 p-5 sm:p-7 bg-gradient-to-br from-[#0A1F44] to-[#153973] border border-[#1E3E61] rounded-2.5xl text-center shadow-[0_12px_36px_rgba(10,31,68,0.08)] relative overflow-hidden"
         >
           <div className="relative z-10 max-w-xl mx-auto">
             <h3 className="text-lg sm:text-xl font-heading font-extrabold text-white mb-2 tracking-tight">
@@ -162,9 +162,9 @@ export default function FAQSection() {
                 whileHover={{ y: -1, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href="tel:+919876543210"
-                className="w-full sm:w-1/2 h-[46px] inline-flex items-center justify-center gap-2 px-5 bg-transparent hover:bg-white/5 border border-[#237FE3] text-white hover:text-white text-xs sm:text-sm font-sans font-extrabold rounded-full transition-all duration-200 select-none cursor-pointer text-center"
+                className="w-full sm:w-1/2 h-[46px] inline-flex items-center justify-center gap-2 px-5 bg-transparent hover:bg-white/5 border border-[#4F87FB] text-white hover:text-white text-xs sm:text-sm font-sans font-extrabold rounded-full transition-all duration-200 select-none cursor-pointer text-center"
               >
-                <Phone className="w-4 h-4 shrink-0 text-[#69B2FF] stroke-[2.25]" />
+                <Phone className="w-4 h-4 shrink-0 text-[#4F87FB] stroke-[2.25]" />
                 Call Now
               </motion.a>
             </div>

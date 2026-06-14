@@ -103,11 +103,11 @@ export default function Header() {
               isScrolled ? 'scale-[0.92]' : 'scale-100'
             }`}
           >
-            <div className="w-11 h-11 rounded-full bg-gradient-to-tr from-[#0B2240] to-[#237FE3] flex items-center justify-center transition-all duration-[300ms] group-hover:scale-105 shadow-md shadow-[#237FE3]/15 relative overflow-hidden">
+            <div className="w-11 h-11 rounded-full bg-gradient-to-tr from-[#0A1F44] to-[#3B82F6] flex items-center justify-center transition-all duration-[300ms] group-hover:scale-105 shadow-md shadow-[#3B82F6]/15 relative overflow-hidden">
               <LogoIcon className="w-[22px] h-[22px] text-white" />
             </div>
             <div className="flex flex-col text-left">
-              <span className="font-heading font-extrabold text-xl tracking-tight text-[#0A2540] leading-none transition-colors duration-300 group-hover:text-[#237FE3]">
+              <span className="font-heading font-extrabold text-xl tracking-tight text-[#0A1F44] leading-none transition-colors duration-300 group-hover:text-[#4F87FB]">
                 SmileCare
               </span>
               <span className="text-[9px] uppercase tracking-widest font-bold text-[#475569] mt-1.5 leading-none">
@@ -134,16 +134,16 @@ export default function Header() {
                       data-nav-link="true"
                       className={`flex items-center gap-1 transition-all duration-300 select-none text-[14px] leading-none ${
                         isActive 
-                          ? 'text-[#237FE3] font-semibold' 
-                          : 'text-[#334155] font-medium hover:text-[#237FE3]'
+                          ? 'text-[#4F87FB] font-semibold' 
+                          : 'text-[#1E293B] font-medium hover:text-[#4F87FB]'
                       }`}
                     >
                       <span>{item.label}</span>
-                      <ChevronDown className="w-3.5 h-3.5 text-[#237FE3]/70 group-hover:text-[#237FE3] transition-transform duration-300 group-hover:rotate-180 shrink-0" />
+                      <ChevronDown className="w-3.5 h-3.5 text-[#3B82F6]/70 group-hover:text-[#4F87FB] transition-transform duration-300 group-hover:rotate-180 shrink-0" />
                       
                       {/* Premium animated underline effect */}
                       <span 
-                        className={`absolute bottom-[-4px] left-1/2 -translate-x-1/2 h-[2px] bg-[#237FE3] rounded-[999px] transition-all duration-[300ms] ease-in-out origin-center ${
+                        className={`absolute bottom-[-4px] left-1/2 -translate-x-1/2 h-[2px] bg-[#4F87FB] rounded-[999px] transition-all duration-[300ms] ease-in-out origin-center ${
                           isActive 
                             ? 'w-full' 
                             : 'w-0 group-hover:w-full'
@@ -152,14 +152,14 @@ export default function Header() {
                     </a>
 
                     {/* Smooth fading dropdown panel */}
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-60 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-250 origin-top ease-out z-50">
-                      <div className="bg-white border border-[#E2E8F0] shadow-[0_12px_36px_rgba(15,23,42,0.12)] rounded-2xl overflow-hidden py-2 text-left">
+                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-60 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-250 origin-top ease-out z-50">
+                      <div className="bg-white border border-[#E2E8F0] shadow-[0_12px_36px_rgba(15,23,42,0.08)] rounded-2xl overflow-hidden py-2 text-left">
                         {dropdownItems.map((sub) => (
                           <a
                             key={sub.id}
                             href="#services"
                             onClick={(e) => handleDropdownItemClick(e, sub.id, sub.formValue)}
-                            className="block px-5 py-3 text-xs sm:text-[13px] text-slate-700 hover:text-[#237FE3] hover:bg-[#F4F9FF]/70 transition-all font-medium border-l-[3px] border-transparent hover:border-[#237FE3]"
+                            className="block px-5 py-3 text-xs sm:text-[13px] text-[#1E293B] hover:text-[#4F87FB] hover:bg-[#F7FAFC] transition-all font-medium border-l-[3px] border-transparent hover:border-[#4F87FB]"
                           >
                             {sub.label}
                           </a>
@@ -177,15 +177,15 @@ export default function Header() {
                   data-nav-link="true"
                   className={`group relative py-2.5 transition-all duration-300 select-none text-[14px] leading-none ${
                     isActive 
-                      ? 'text-[#237FE3] font-semibold' 
-                      : 'text-[#334155] font-medium hover:text-[#69B2FF]'
+                      ? 'text-[#4F87FB] font-semibold' 
+                      : 'text-[#1E293B] font-medium hover:text-[#4F87FB]'
                   }`}
                 >
                   <span>{item.label}</span>
                   
                   {/* Premium animated underline effect */}
                   <span 
-                    className={`absolute bottom-[-4px] left-1/2 -translate-x-1/2 h-[2px] bg-[#237FE3] rounded-[999px] transition-all duration-[300ms] ease-in-out origin-center ${
+                    className={`absolute bottom-[-4px] left-1/2 -translate-x-1/2 h-[2px] bg-[#4F87FB] rounded-[999px] transition-all duration-[300ms] ease-in-out origin-center ${
                       isActive 
                         ? 'w-full' 
                         : 'w-0 group-hover:w-full'
@@ -202,17 +202,17 @@ export default function Header() {
             {/* Phone Call Badge */}
             <a 
               href="tel:+919876543210"
-              className="flex items-center gap-2 px-5 py-[11px] bg-[#F4F9FF] border border-[#BFD9FF]/60 text-[#0A2540] font-semibold text-xs sm:text-sm rounded-full transition-all duration-300 hover:bg-[#BFD9FF]/40 hover:-translate-y-[2px] hover:shadow-md shadow-sm active:scale-98"
+              className="flex items-center gap-2 px-5 py-[11px] bg-white border border-[#D8E5FF] text-[#1E293B] font-semibold text-xs sm:text-sm rounded-full transition-all duration-300 hover:bg-[#D8E5FF]/40 hover:-translate-y-[2px] hover:shadow-md shadow-sm active:scale-98"
               id="phone-badge"
             >
-              <Phone className="w-4 h-4 text-[#237FE3] shrink-0" />
+              <Phone className="w-4 h-4 text-[#4F87FB] shrink-0" />
               <span>+91 98765 43210</span>
             </a>
 
             {/* Book Appointment CTA Button */}
             <a 
               href="#book"
-              className="inline-flex items-center justify-center gap-2 px-[26px] py-[14px] bg-[#237FE3] text-white font-bold text-xs sm:text-sm rounded-[999px] transition-all duration-300 hover:bg-[#69B2FF] hover:-translate-y-[2px] hover:shadow-[0_10px_25px_rgba(35,127,227,0.25)] active:translate-y-0 shadow-[0_4px_14px_rgba(35,127,227,0.12)]"
+              className="inline-flex items-center justify-center gap-2 px-[26px] py-[14px] bg-[#4F87FB] text-white font-bold text-xs sm:text-sm rounded-[999px] transition-all duration-300 hover:bg-[#3B78F0] hover:-translate-y-[2px] hover:shadow-[0_10px_25px_rgba(79,135,251,0.25)] active:translate-y-0 shadow-[0_4px_14px_rgba(79,135,251,0.12)]"
               id="book-cta"
             >
               <Calendar className="w-4 h-4 shrink-0" />
@@ -227,16 +227,16 @@ export default function Header() {
               onClick={() => {
                 window.dispatchEvent(new CustomEvent('open-booking-modal', { detail: { treatment: '' } }));
               }}
-              className="flex items-center justify-center w-10 h-10 bg-[#F4F9FF] border border-[#BFD9FF]/60 text-[#0A2540] rounded-full transition-all active:scale-90 cursor-pointer"
+              className="flex items-center justify-center w-10 h-10 bg-[#F7FAFC] border border-[#D8E5FF] text-[#0A1F44] rounded-full transition-all active:scale-90 cursor-pointer"
               aria-label="Book appointment"
             >
-              <CalendarCheck className="w-4 h-4 text-[#237FE3] shrink-0" />
+              <CalendarCheck className="w-4 h-4 text-[#4F87FB] shrink-0" />
             </button>
 
             <button 
               type="button"
               onClick={() => setIsMobileMenuOpen(true)}
-              className="p-2 ml-1 rounded-xl text-[#237FE3] hover:bg-slate-50 transition-all focus:outline-none flex items-center justify-center"
+              className="p-2 ml-1 rounded-xl text-[#4F87FB] hover:bg-slate-50 transition-all focus:outline-none flex items-center justify-center"
               aria-label="Toggle menu"
             >
               <Menu className="w-6 h-6 shrink-0" />
@@ -256,7 +256,7 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-[#0A2540]/30 z-50 lg:hidden cursor-pointer"
+              className="fixed inset-0 bg-[#0A1F44]/30 z-50 lg:hidden cursor-pointer"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
@@ -271,11 +271,11 @@ export default function Header() {
               {/* Header section in-drawer */}
               <div className="flex items-center justify-between pb-6 border-b border-[#E2E8F0] mb-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#0B2240] to-[#237FE3] flex items-center justify-center shadow-md">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#0A1F44] to-[#3B82F6] flex items-center justify-center shadow-md">
                     <LogoIcon className="w-5 h-5 text-white shrink-0" />
                   </div>
                   <div className="flex flex-col text-left">
-                    <span className="font-heading font-extrabold text-lg text-[#0A2540] leading-none">
+                    <span className="font-heading font-extrabold text-lg text-[#0A1F44] leading-none">
                       SmileCare
                     </span>
                     <span className="text-[8px] uppercase tracking-widest font-bold text-[#475569] mt-1.5 leading-none">
@@ -288,10 +288,10 @@ export default function Header() {
                   whileTap={{ scale: 0.92 }}
                   type="button"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#F4F9FF] text-[#237FE3] flex items-center justify-center hover:bg-[#BFD9FF]/40 transition-all focus:outline-none cursor-pointer"
+                  className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#F7FAFC] text-[#4F87FB] flex items-center justify-center hover:bg-[#D8E5FF]/40 transition-all focus:outline-none cursor-pointer"
                   aria-label="Close menu"
                 >
-                  <X className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 text-[#237FE3]" />
+                  <X className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 text-[#4F87FB]" />
                 </motion.button>
               </div>
 
@@ -311,12 +311,12 @@ export default function Header() {
                           onClick={() => setIsMobileTreatmentsExpanded(!isMobileTreatmentsExpanded)}
                           className={`flex items-center justify-between py-3.5 px-3 rounded-xl text-[15px] font-semibold tracking-wide transition-all duration-200 text-left cursor-pointer select-none ${
                             isActive
-                              ? 'text-[#237FE3] bg-[#F4F9FF]/80'
-                              : 'text-[#0A2540] hover:text-[#69B2FF] hover:bg-slate-50'
+                              ? 'text-[#4F87FB] bg-[#F7FAFC]'
+                              : 'text-[#0A1F44] hover:text-[#4F87FB] hover:bg-slate-50'
                           }`}
                         >
                           <span>{item.label}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-300 shrink-0 ${isMobileTreatmentsExpanded ? 'rotate-180 text-[#237FE3]' : 'text-slate-400'}`} />
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-300 shrink-0 ${isMobileTreatmentsExpanded ? 'rotate-180 text-[#4F87FB]' : 'text-slate-400'}`} />
                         </motion.button>
                         
                         <AnimatePresence initial={false}>
@@ -337,7 +337,7 @@ export default function Header() {
                                       setIsMobileMenuOpen(false);
                                       handleDropdownItemClick(e, sub.id, sub.formValue);
                                     }}
-                                    className="py-2.5 px-3 rounded-lg text-[13px] font-medium text-slate-500 hover:text-[#237FE3] hover:bg-[#F4F9FF]/60 transition-all text-left block border-b border-dashed border-slate-100/40 last:border-0"
+                                    className="py-2.5 px-3 rounded-lg text-[13px] font-medium text-slate-500 hover:text-[#4F87FB] hover:bg-[#F7FAFC] transition-all text-left block border-b border-dashed border-slate-100/40 last:border-0"
                                   >
                                     {sub.label}
                                   </a>
@@ -361,12 +361,12 @@ export default function Header() {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`flex items-center justify-between py-3.5 px-3 rounded-xl text-[15px] font-semibold tracking-wide transition-all duration-200 border-b border-slate-100/80 ${
                         isActive
-                          ? 'text-[#237FE3] bg-[#F4F9FF]/80'
-                          : 'text-[#0A2540] hover:text-[#69B2FF] hover:bg-slate-50'
+                          ? 'text-[#4F87FB] bg-[#F7FAFC]'
+                          : 'text-[#0A1F44] hover:text-[#4F87FB] hover:bg-slate-50'
                       }`}
                     >
                       <span>{item.label}</span>
-                      <ChevronRight className={`w-4 h-4 transition-transform duration-200 shrink-0 ${isActive ? 'translate-x-1 text-[#237FE3]' : 'text-slate-300'}`} />
+                      <ChevronRight className={`w-4 h-4 transition-transform duration-200 shrink-0 ${isActive ? 'translate-x-1 text-[#4F87FB]' : 'text-slate-300'}`} />
                     </motion.a>
                   );
                 })}
@@ -379,9 +379,9 @@ export default function Header() {
                   <motion.a
                     whileTap={{ scale: 0.97 }}
                     href="tel:+919876543210"
-                    className="flex items-center justify-center gap-2 w-full h-[48px] bg-[#F4F9FF] border border-[#BFD9FF]/30 text-[#237FE3] font-body font-bold text-[13px] rounded-[10px] transition-all"
+                    className="flex items-center justify-center gap-2 w-full h-[48px] bg-[#F7FAFC] border border-[#D8E5FF] text-[#4F87FB] font-body font-bold text-[13px] rounded-[10px] transition-all"
                   >
-                    <Phone className="w-4 h-4 text-[#237FE3] shrink-0" />
+                    <Phone className="w-4 h-4 text-[#4F87FB] shrink-0" />
                     <span>Call +91 98765 43210</span>
                   </motion.a>
 
@@ -389,7 +389,7 @@ export default function Header() {
                     whileTap={{ scale: 0.97 }}
                     href="#book"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center justify-center gap-2 w-full h-[48px] bg-[#237FE3] text-white font-body font-bold text-[13px] rounded-[10px] shadow-sm hover:bg-[#69B2FF] transition-all"
+                    className="flex items-center justify-center gap-2 w-full h-[48px] bg-[#4F87FB] text-white font-body font-bold text-[13px] rounded-[10px] shadow-sm hover:bg-[#3B78F0] transition-all"
                   >
                     <Calendar className="w-4 h-4 shrink-0 text-white" />
                     <span>Book Appointment</span>

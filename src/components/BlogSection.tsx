@@ -11,7 +11,7 @@ const blogArticles = [
     author: 'Dr. Amit Sharma',
     date: 'January 2026',
     imageUrl: 'https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    color: 'bg-emerald-50 text-emerald-800 border border-emerald-150'
+    color: 'bg-[#F7FAFC] text-[#3B82F6] border border-[#D8E5FF]/60'
   },
   {
     category: 'Cosmetic',
@@ -31,7 +31,7 @@ const blogArticles = [
     author: 'Dr. Amit Sharma',
     date: 'March 2026',
     imageUrl: 'https://images.unsplash.com/photo-1653508310895-62141575a3a9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    color: 'bg-[#F4F9FF] text-[#237FE3] border border-[#BFD9FF]/60'
+    color: 'bg-[#F7FAFC] text-[#3B82F6] border border-[#D8E5FF]/60'
   }
 ];
 
@@ -43,10 +43,10 @@ export default function BlogSection() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row gap-5 justify-between items-start md:items-end mb-10 sm:mb-12">
           <div className="text-left max-w-xl">
-            <span className="text-[10px] font-sans font-extrabold tracking-widest text-[#237FE3] uppercase bg-[#F4F9FF] border border-[#BFD9FF]/60 px-3.5 py-1 rounded-full inline-block mb-3 shadow-[0_1px_2px_rgba(35,127,227,0.03)] select-none">
+            <span className="text-[10px] font-sans font-extrabold tracking-widest text-[#3B82F6] uppercase bg-[#F7FAFC] border border-[#D8E5FF]/60 px-3.5 py-1 rounded-full inline-block mb-3 shadow-[0_1px_2px_rgba(59,130,246,0.03)] select-none">
               PATIENT KNOWLEDGE HUB
             </span>
-            <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-[#0A1628] tracking-tight leading-tight mb-2">
+            <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-[#0A1F44] tracking-tight leading-tight mb-2">
               Expert Dental Guides & Resources
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed font-body">
@@ -57,7 +57,7 @@ export default function BlogSection() {
             href="#blog"
             whileHover="hover"
             initial="initial"
-            className="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-[#F4F9FF] text-[#237FE3] hover:bg-[#237FE3] border border-[#BFD9FF]/80 hover:text-white hover:border-[#237FE3] hover:shadow-[0_4px_12px_rgba(35,127,227,0.1)] transition-all font-sans font-extrabold text-xs shrink-0 select-none cursor-pointer"
+            className="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-[#F7FAFC] text-[#3B82F6] hover:bg-[#3B82F6] border border-[#D8E5FF]/80 hover:text-white hover:border-[#3B82F6] hover:shadow-[0_4px_12px_rgba(59,130,246,0.1)] transition-all font-sans font-extrabold text-xs shrink-0 select-none cursor-pointer"
           >
             <span>Explore Articles</span>
             <motion.span
@@ -82,7 +82,7 @@ export default function BlogSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-white border border-[#E2E8F0] rounded-3xl overflow-hidden hover:shadow-[0_12px_30px_rgba(15,23,42,0.035)] hover:border-[#237FE3]/30 transition-all duration-300 group flex flex-col h-full cursor-pointer"
+                className="bg-white border border-[#E2E8F0] rounded-3xl overflow-hidden hover:shadow-[0_12px_30px_rgba(15,23,42,0.035)] hover:border-[#3B82F6]/30 transition-all duration-300 group flex flex-col h-full cursor-pointer"
               >
                 {/* Visual Cover - standardised height with referrer policy */}
                 <div className="h-48 sm:h-52 overflow-hidden relative shrink-0">
@@ -100,7 +100,7 @@ export default function BlogSection() {
                 {/* Article texts and fields */}
                 <div className="p-5 sm:p-6 text-left flex-1 flex flex-col justify-between">
                   <div className="mb-4">
-                    <h3 className="text-xs sm:text-sm font-heading font-extrabold text-[#0A1628] leading-snug tracking-tight mb-2 group-hover:text-[#237FE3] transition-colors line-clamp-2">
+                    <h3 className="text-xs sm:text-sm font-heading font-extrabold text-[#0A1F44] leading-snug tracking-tight mb-2 group-hover:text-[#3B82F6] transition-colors line-clamp-2">
                       {article.title}
                     </h3>
                     <p className="text-[11px] sm:text-xs text-slate-500 font-sans font-normal leading-relaxed line-clamp-3">
@@ -121,14 +121,14 @@ export default function BlogSection() {
                         {article.readTime}
                       </span>
                       <span className="w-1 h-1 bg-slate-300 rounded-full shrink-0" />
-                      <span className="flex items-center gap-1 text-[#0A1628] shrink-0 font-extrabold">
-                        <User className="w-3.5 h-3.5 text-[#237FE3] shrink-0 stroke-[2.25]" />
+                      <span className="flex items-center gap-1 text-[#0A1F44] shrink-0 font-extrabold">
+                        <User className="w-3.5 h-3.5 text-[#3B82F6] shrink-0 stroke-[2.25]" />
                         {article.author}
                       </span>
                     </div>
 
                     {/* Read More CTA */}
-                    <div className="flex items-center gap-1 text-[#237FE3] font-sans font-extrabold text-xs sm:text-sm select-none">
+                    <div className="flex items-center gap-1 text-[#3B82F6] font-sans font-extrabold text-xs sm:text-sm select-none">
                       <span>Read More</span>
                       <motion.span 
                         variants={{

@@ -405,7 +405,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" className="scroll-mt-24 bg-[#F8FAFC] py-24 px-4 sm:px-6 lg:px-8 border-b border-[#E2E8F0]">
+    <section id="services" className="scroll-mt-24 bg-[#F7FAFC] py-24 px-4 sm:px-6 lg:px-8 border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header with Badge */}
@@ -416,10 +416,10 @@ export default function Services() {
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-20"
         >
-          <span className="text-[11px] font-bold tracking-widest text-[#237FE3] uppercase bg-[#237FE3]/10 border border-[#237FE3]/25 px-4 py-1.5 rounded-full inline-block mb-4.5 shadow-sm select-none animate-pulse">
+          <span className="text-[11px] font-bold tracking-widest text-[#3B82F6] uppercase bg-[#3B82F6]/8 border border-[#3B82F6]/15 px-4 py-1.5 rounded-full inline-block mb-4.5 shadow-sm select-none animate-pulse">
             OUR SPECIALTIES
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-extrabold text-[#0A2540] tracking-tight leading-[1.15] mb-4.5">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-extrabold text-[#0A1F44] tracking-tight leading-[1.15] mb-4.5">
             Comprehensive Dental Care,<br className="hidden sm:inline" /> Designed Around Your Comfort
           </h2>
           <p className="text-sm sm:text-base text-[#475569] font-normal leading-[1.7] max-w-[680px] mx-auto font-sans">
@@ -443,11 +443,11 @@ export default function Services() {
                 key={service.id}
                 variants={gridCardVariants}
                 whileHover={{ y: -8 }}
-                className="group relative bg-[#FFFFFF] border border-[rgba(35,127,227,0.12)] hover:border-[#237FE3] hover:ring-1 hover:ring-[#237FE3] rounded-[24px] py-10 px-8 sm:p-8 shadow-[0_20px_40px_rgba(10,37,64,0.08)] hover:shadow-[0_24px_48px_rgba(10,37,64,0.12)] transition-[border-color,box-shadow] duration-300 ease-out select-none flex flex-col items-start text-left shrink-0 cursor-default"
+                className="group relative bg-[#FFFFFF] border border-[rgba(59,130,246,0.12)] hover:border-[#4F87FB] hover:ring-1 hover:ring-[#4F87FB] rounded-[24px] py-10 px-8 sm:p-8 shadow-[0_20px_40px_rgba(10,31,68,0.08)] hover:shadow-[0_24px_48px_rgba(10,31,68,0.12)] transition-[border-color,box-shadow] duration-300 ease-out select-none flex flex-col items-start text-left shrink-0 cursor-default"
               >
                 {/* Premium elegant badge strictly for flagged treatments */}
                 {service.badge && (
-                  <span className="absolute top-5 right-6 text-[10px] font-extrabold tracking-wider text-[#0A2540] bg-[#F4F9FF] px-3 py-1.5 rounded-full uppercase select-none border border-[#237FE3]/10 shadow-sm">
+                  <span className="absolute top-5 right-6 text-[10px] font-extrabold tracking-wider text-[#0A1F44] bg-[#F7FAFC] px-3 py-1.5 rounded-full uppercase select-none border border-[#3B82F6]/10 shadow-sm">
                     {service.badge}
                   </span>
                 )}
@@ -460,13 +460,13 @@ export default function Services() {
                     rotate: 3,
                     transition: { type: "spring", stiffness: 400, damping: 10 } 
                   }}
-                  className="w-13 h-13 bg-[#F4F9FF] border border-[rgba(35,127,227,0.08)] rounded-[20px] flex items-center justify-center mb-6.5 shadow-sm group-hover:shadow-[0_6px_16px_rgba(35,127,227,0.12)] cursor-pointer"
+                  className="w-13 h-13 bg-[#F7FAFC] border border-[rgba(59,130,246,0.08)] rounded-[20px] flex items-center justify-center mb-6.5 shadow-sm group-hover:shadow-[0_6px_16px_rgba(19,83,184,0.12)] cursor-pointer"
                 >
-                  <IconComponent className="w-6 h-6 text-[#237FE3]" strokeWidth={1.5} />
+                  <IconComponent className="w-6 h-6 text-[#3B82F6]" strokeWidth={1.5} />
                 </motion.div>
 
                 {/* Treatment details */}
-                <h3 className="text-lg font-heading font-extrabold text-[#0A2540] group-hover:text-[#237FE3] transition-colors duration-300 mb-3.5 tracking-tight">
+                <h3 className="text-lg font-heading font-extrabold text-[#0A1F44] group-hover:text-[#4F87FB] transition-colors duration-300 mb-3.5 tracking-tight">
                   {service.title}
                 </h3>
                 
@@ -479,7 +479,7 @@ export default function Services() {
                   {service.tags.map((tag, tIdx) => (
                     <span 
                       key={tIdx} 
-                      className="text-[11px] font-semibold text-[#237FE3] bg-[#F4F9FF] border border-transparent px-3 py-1.2 rounded-full transition-all duration-300"
+                      className="text-[11px] font-semibold text-[#3B82F6] bg-[#F7FAFC] border border-transparent px-3 py-1.2 rounded-full transition-all duration-300"
                     >
                       {tag}
                     </span>
@@ -495,7 +495,7 @@ export default function Services() {
                     setActiveTreatment(service.title);
                     window.dispatchEvent(new CustomEvent('set-selected-treatment-context', { detail: service.title }));
                   }}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#237FE3] hover:text-[#69B2FF] group-hover:text-[#69B2FF] transition-colors duration-300 pointer-events-auto cursor-pointer focus:outline-none py-3 px-4 -ml-4 -mb-3 sm:py-0 sm:px-0 sm:m-0 rounded-lg active:bg-[#237FE3]/5 sm:active:bg-transparent"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#4F87FB] hover:text-[#3B78F0] group-hover:text-[#3B78F0] transition-colors duration-300 pointer-events-auto cursor-pointer focus:outline-none py-3 px-4 -ml-4 -mb-3 sm:py-0 sm:px-0 sm:m-0 rounded-lg active:bg-[#4F87FB]/5 sm:active:bg-transparent"
                 >
                   View Details <span className="transform transition-transform duration-300 group-hover:translate-x-1.5">→</span>
                 </button>
@@ -511,13 +511,13 @@ export default function Services() {
         {activeService && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             
-            {/* Soft, dark corporate backdrop (rgba(10,37,64,0.65)) */}
+            {/* Soft, dark corporate backdrop (rgba(10,31,68,0.65)) */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={handleClose}
-              className="fixed inset-0 bg-[#0A2540]/65 backdrop-blur-sm z-40 transition-opacity"
+              className="fixed inset-0 bg-[#0A1F44]/65 backdrop-blur-sm z-40 transition-opacity"
             />
 
             {/* Custom Modal Content Box (Max Width: 700px, Radius: 28px, Background: #FFFFFF) */}
@@ -526,13 +526,13 @@ export default function Services() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="relative bg-[#FFFFFF] rounded-[28px] overflow-hidden z-50 w-full max-w-[700px] shadow-[0_30px_80px_rgba(10,37,64,0.18)] max-h-[92vh] overflow-y-auto border border-[#E2E8F0] selection:bg-[#237FE3] selection:text-white"
+              className="relative bg-[#FFFFFF] rounded-[28px] overflow-hidden z-50 w-full max-w-[700px] shadow-[0_30px_80px_rgba(10,31,68,0.18)] max-h-[92vh] overflow-y-auto border border-[#E2E8F0] selection:bg-[#4F87FB] selection:text-white"
             >
               {/* Close Button top-right corner with ESC handle */}
               <button
                 type="button"
                 onClick={handleClose}
-                className="absolute top-6 right-6 w-9 h-9 bg-slate-100 hover:bg-[#F4F9FF] text-[#475569] hover:text-[#237FE3] rounded-full flex items-center justify-center transition-all duration-300 focus:outline-none pointer-events-auto cursor-pointer border border-transparent hover:border-[#237FE3]/15"
+                className="absolute top-6 right-6 w-9 h-9 bg-slate-100 hover:bg-[#F7FAFC] text-[#475569] hover:text-[#4F87FB] rounded-full flex items-center justify-center transition-all duration-300 focus:outline-none pointer-events-auto cursor-pointer border border-transparent hover:border-[#4F87FB]/15"
                 aria-label="Close treatment modal"
               >
                 <X className="w-5 h-5" />
@@ -547,18 +547,18 @@ export default function Services() {
                     initial={{ scale: 0.4, opacity: 0, rotate: -10 }}
                     animate={{ scale: 1, opacity: 1, rotate: 0 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className="w-13 h-13 bg-[#F4F9FF] border border-[rgba(35,127,227,0.12)] rounded-[20px] flex items-center justify-center shrink-0 shadow-sm"
+                    className="w-13 h-13 bg-[#F7FAFC] border border-[rgba(59,130,246,0.12)] rounded-[20px] flex items-center justify-center shrink-0 shadow-sm"
                   >
-                    {React.createElement(activeService.icon, { className: "w-6 h-6 text-[#237FE3]", strokeWidth: 1.5 })}
+                    {React.createElement(activeService.icon, { className: "w-6 h-6 text-[#3B82F6]", strokeWidth: 1.5 })}
                   </motion.div>
                   <div>
-                    <span className="text-[10px] font-bold text-[#237FE3] uppercase tracking-widest leading-none block mb-1">
+                    <span className="text-[10px] font-bold text-[#3B82F6] uppercase tracking-widest leading-none block mb-1">
                       {activeService.category}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-heading font-extrabold text-[#0A2540] tracking-tight leading-tight flex items-center flex-wrap gap-2">
+                    <h3 className="text-xl sm:text-2xl font-heading font-extrabold text-[#0A1F44] tracking-tight leading-tight flex items-center flex-wrap gap-2">
                       {activeService.title}
                       {activeService.badge && (
-                        <span className="text-[9px] font-bold tracking-wider text-[#0A2540] bg-[#F4F9FF] px-2.5 py-1 rounded-full uppercase select-none border border-[#237FE3]/10 shadow-sm">
+                        <span className="text-[9px] font-bold tracking-wider text-[#0A1F44] bg-[#F7FAFC] px-2.5 py-1 rounded-full uppercase select-none border border-[#3B82F6]/10 shadow-sm">
                           {activeService.badge}
                         </span>
                       )}
@@ -574,8 +574,8 @@ export default function Services() {
                     
                     {/* TREATMENT OVERVIEW */}
                     <div>
-                      <h4 className="text-[11px] font-bold text-[#237FE3] tracking-wider uppercase mb-2 flex items-center gap-1.5 select-none font-sans">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#237FE3]" />
+                      <h4 className="text-[11px] font-bold text-[#3B82F6] tracking-wider uppercase mb-2 flex items-center gap-1.5 select-none font-sans">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]" />
                         Treatment Overview
                       </h4>
                       <p className="text-sm text-[#475569] leading-relaxed font-sans font-normal antialiased">
@@ -585,8 +585,8 @@ export default function Services() {
 
                     {/* KEY BENEFITS - Treatment Specific with Stagger Reveal */}
                     <div>
-                      <h4 className="text-[11px] font-bold text-[#237FE3] tracking-wider uppercase mb-3 flex items-center gap-1.5 select-none font-sans">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#237FE3]" />
+                      <h4 className="text-[11px] font-bold text-[#3B82F6] tracking-wider uppercase mb-3 flex items-center gap-1.5 select-none font-sans">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]" />
                         Key Benefits
                       </h4>
                       <motion.ul 
@@ -601,8 +601,8 @@ export default function Services() {
                             variants={itemVariants}
                             className="flex items-center gap-3 text-sm text-[#475569] font-medium font-sans"
                           >
-                            <span className="w-5 h-5 rounded-full bg-[#F4F9FF] flex items-center justify-center shrink-0 border border-[#237FE3]/10">
-                              <Check className="w-3 h-3 text-[#237FE3] stroke-[3]" />
+                            <span className="w-5 h-5 rounded-full bg-[#F7FAFC] flex items-center justify-center shrink-0 border border-[#3B82F6]/10">
+                              <Check className="w-3 h-3 text-[#4F87FB] stroke-[3]" />
                             </span>
                             <span>{benefit}</span>
                           </motion.li>
@@ -612,8 +612,8 @@ export default function Services() {
 
                     {/* TECHNOLOGY USED - Relevant to each treatment */}
                     <div>
-                      <h4 className="text-[11px] font-bold text-[#237FE3] tracking-wider uppercase mb-3 flex items-center gap-1.5 select-none font-sans">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#237FE3]" />
+                      <h4 className="text-[11px] font-bold text-[#3B82F6] tracking-wider uppercase mb-3 flex items-center gap-1.5 select-none font-sans">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]" />
                         Technology Used
                       </h4>
                       <motion.ul 
@@ -628,8 +628,8 @@ export default function Services() {
                              variants={itemVariants}
                              className="flex items-center gap-3 text-sm text-[#475569] font-semibold font-sans"
                            >
-                             <span className="w-5 h-5 rounded-full bg-[#F4F9FF] flex items-center justify-center shrink-0 border border-[#237FE3]/10">
-                               <Zap className="w-3 h-3 text-[#237FE3] fill-[#237FE3]" />
+                             <span className="w-5 h-5 rounded-full bg-[#F7FAFC] flex items-center justify-center shrink-0 border border-[#3B82F6]/10">
+                               <Zap className="w-3 h-3 text-[#3B82F6] fill-[#3B82F6]" />
                              </span>
                              <span>{techItem}</span>
                            </motion.li>
@@ -644,16 +644,16 @@ export default function Services() {
                     
                     {/* TREATMENT DURATION info card */}
                     <motion.div 
-                      whileHover={{ scale: 1.015, y: -2 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                      className="p-4 rounded-2xl bg-white border border-slate-100 flex items-start gap-3.5 shadow-sm hover:shadow-md transition-shadow cursor-default"
+                       whileHover={{ scale: 1.015, y: -2 }}
+                       transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                       className="p-4 rounded-2xl bg-white border border-slate-100 flex items-start gap-3.5 shadow-sm hover:shadow-md transition-shadow cursor-default"
                     >
                       <div className="w-10 h-10 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
-                        <Clock className="w-5 h-5 text-[#0A2540]" />
+                        <Clock className="w-5 h-5 text-[#0A1F44]" />
                       </div>
                       <div className="font-sans">
                         <p className="text-[10px] font-bold text-[#64748B] uppercase tracking-wider mb-0.5">Treatment Duration</p>
-                        <p className="text-sm font-bold text-[#0A2540] leading-tight">{activeService.duration}</p>
+                        <p className="text-sm font-bold text-[#0A1F44] leading-tight">{activeService.duration}</p>
                       </div>
                     </motion.div>
 
@@ -661,14 +661,14 @@ export default function Services() {
                     <motion.div 
                       whileHover={{ scale: 1.015, y: -2 }}
                       transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                      className="p-4 rounded-2xl bg-[#F4F9FF] border border-[rgba(35,127,227,0.14)] flex items-start gap-3.5 shadow-sm hover:shadow-md transition-shadow cursor-default"
+                      className="p-4 rounded-2xl bg-[#F7FAFC] border border-[rgba(59,130,246,0.12)] flex items-start gap-3.5 shadow-sm hover:shadow-md transition-shadow cursor-default"
                     >
-                      <div className="w-10 h-10 bg-[#FFFFFF] border border-[#BFD9FF]/40 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
-                        <span className="text-sm font-black text-[#237FE3]">₹</span>
+                      <div className="w-10 h-10 bg-[#FFFFFF] border border-[#D8E5FF] rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                        <span className="text-sm font-black text-[#3B82F6]">₹</span>
                       </div>
                       <div className="font-sans">
-                        <p className="text-[10px] font-bold text-[#237FE3] uppercase tracking-wider mb-0.5">Estimated Cost</p>
-                        <p className="text-sm font-bold text-[#0A2540] leading-tight">{activeService.cost}</p>
+                        <p className="text-[10px] font-bold text-[#3B82F6] uppercase tracking-wider mb-0.5">Estimated Cost</p>
+                        <p className="text-sm font-bold text-[#0A1F44] leading-tight">{activeService.cost}</p>
                       </div>
                     </motion.div>
 
@@ -676,14 +676,14 @@ export default function Services() {
                     <motion.div 
                       whileHover={{ scale: 1.015, y: -2 }}
                       transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                      className="p-4 rounded-2xl bg-[#F4F9FF] border border-[rgba(35,127,227,0.14)] flex items-start gap-3.5 shadow-sm hover:shadow-md transition-shadow cursor-default"
+                      className="p-4 rounded-2xl bg-[#F7FAFC] border border-[rgba(59,130,246,0.12)] flex items-start gap-3.5 shadow-sm hover:shadow-md transition-shadow cursor-default"
                     >
-                      <div className="w-10 h-10 bg-[#FFFFFF] border border-[#BFD9FF]/55 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
-                        <Heart className="w-4.5 h-4.5 text-[#237FE3] fill-[#237FE3]/5" />
+                      <div className="w-10 h-10 bg-[#FFFFFF] border border-[#D8E5FF] rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                        <Heart className="w-4.5 h-4.5 text-[#3B82F6] fill-[#3B82F6]/5" />
                       </div>
                       <div className="font-sans">
-                        <p className="text-[10px] font-bold text-[#237FE3] uppercase tracking-wider mb-0.5">Recovery</p>
-                        <p className="text-sm font-bold text-[#0A2540] leading-tight">{activeService.recovery}</p>
+                        <p className="text-[10px] font-bold text-[#3B82F6] uppercase tracking-wider mb-0.5">Recovery</p>
+                        <p className="text-sm font-bold text-[#0A1F44] leading-tight">{activeService.recovery}</p>
                       </div>
                     </motion.div>
 
@@ -693,17 +693,17 @@ export default function Services() {
                 {/* Trust Strip */}
                 <div className="flex flex-row justify-center items-center gap-4 sm:gap-6 pt-5 pb-1 text-[11px] sm:text-xs text-[#64748B] font-semibold border-t border-slate-100 flex-wrap select-none font-sans">
                   <span className="flex items-center gap-1.5 whitespace-nowrap">
-                    <Check className="w-3.5 h-3.5 text-[#237FE3] stroke-[3]" />
+                    <Check className="w-3.5 h-3.5 text-[#4F87FB] stroke-[3]" />
                     ISO Certified Clinic
                   </span>
                   <span className="w-1 h-1 rounded-full bg-slate-300 hidden sm:inline" />
                   <span className="flex items-center gap-1.5 whitespace-nowrap">
-                    <Check className="w-3.5 h-3.5 text-[#237FE3] stroke-[3]" />
+                    <Check className="w-3.5 h-3.5 text-[#4F87FB] stroke-[3]" />
                     12,000+ Happy Patients
                   </span>
                   <span className="w-1 h-1 rounded-full bg-slate-300 hidden sm:inline" />
                   <span className="flex items-center gap-1.5 whitespace-nowrap">
-                    <Check className="w-3.5 h-3.5 text-[#237FE3] stroke-[3]" />
+                    <Check className="w-3.5 h-3.5 text-[#4F87FB] stroke-[3]" />
                     4.9 Google Rating
                   </span>
                 </div>
@@ -727,7 +727,7 @@ export default function Services() {
                     whileHover={{ y: -2, scale: 1.012 }}
                     whileTap={{ scale: 0.985 }}
                     transition={{ type: "spring", stiffness: 400, damping: 22 }}
-                    className="flex-[2] py-4 bg-[#237FE3] hover:bg-[#69B2FF] text-white font-bold text-center rounded-full text-sm transition-all duration-300 shadow-[0_10px_20px_rgba(35,127,227,0.18)] hover:shadow-[0_15px_30px_rgba(105,178,255,0.32)] flex items-center justify-center gap-2 pointer-events-auto cursor-pointer"
+                    className="flex-[2] py-4 bg-[#4F87FB] hover:bg-[#3B78F0] text-white font-bold text-center rounded-full text-sm transition-all duration-300 shadow-[0_10px_20px_rgba(79,135,251,0.18)] hover:shadow-[0_15px_30px_rgba(59,120,240,0.32)] flex items-center justify-center gap-2 pointer-events-auto cursor-pointer"
                   >
                     <Calendar className="w-4 h-4" />
                     Book Appointment
@@ -739,7 +739,7 @@ export default function Services() {
                     whileHover={{ y: -2, scale: 1.012 }}
                     whileTap={{ scale: 0.985 }}
                     transition={{ type: "spring", stiffness: 400, damping: 22 }}
-                    className="flex-1 py-4 border border-[#0A2540] hover:border-[#237FE3] bg-white text-[#0A2540] hover:text-[#237FE3] font-bold text-center rounded-full text-sm transition-all duration-300 flex items-center justify-center gap-2 pointer-events-auto"
+                    className="flex-1 py-4 border border-[#0A1F44] hover:border-[#4F87FB] bg-white text-[#0A1F44] hover:text-[#4F87FB] font-bold text-center rounded-full text-sm transition-all duration-300 flex items-center justify-center gap-2 pointer-events-auto"
                   >
                     <Phone className="w-4 h-4" />
                     Call Now

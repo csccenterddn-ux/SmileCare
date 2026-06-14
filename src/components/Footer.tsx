@@ -34,7 +34,7 @@ const YT_LINK = getClinicValue(CLINIC_INFO.youtubeUrl, "#");
 
 export default function Footer() {
   return (
-    <footer className="bg-[#071B35] text-white/75 relative border-t border-sky-950">
+    <footer className="bg-[#0A1F44] text-white/75 relative border-t border-sky-950">
       
       {/* Top Footer Section columns */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -43,13 +43,13 @@ export default function Footer() {
           {/* Col 1: Clinic details & social icons */}
           <div className="text-center md:text-left space-y-6 flex flex-col items-center md:items-start">
             <a href="#" className="flex items-center justify-center md:justify-start gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#0B2240] to-[#237FE3] rounded-xl flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#0A1F44] to-[#3B82F6] rounded-xl flex items-center justify-center shadow-md">
                 <LogoIcon className="w-5 h-5 text-white" />
               </div>
               <span className="font-heading font-extrabold text-xl text-white tracking-tight">
                 {NAME_VAL.includes("SmileCare") ? (
                   <>
-                    SmileCare<span className="text-[#69B2FF] font-medium">Dental</span>
+                    SmileCare<span className="text-[#4F87FB] font-medium">Dental</span>
                   </>
                 ) : (
                   <span>{NAME_VAL}</span>
@@ -67,7 +67,7 @@ export default function Footer() {
                 href={FB_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#BFD9FF] hover:text-white hover:bg-[#237FE3] hover:border-[#237FE3] transition-all duration-300 shadow-sm"
+                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#4F87FB] hover:border-[#4F87FB] transition-all duration-300 shadow-sm"
               >
                 <Facebook className="w-4 h-4" />
               </a>
@@ -75,7 +75,7 @@ export default function Footer() {
                 href={IG_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#BFD9FF] hover:text-white hover:bg-[#237FE3] hover:border-[#237FE3] transition-all duration-300 shadow-sm"
+                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#4F87FB] hover:border-[#4F87FB] transition-all duration-300 shadow-sm"
               >
                 <Instagram className="w-4 h-4" />
               </a>
@@ -83,7 +83,7 @@ export default function Footer() {
                 href={YT_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#BFD9FF] hover:text-white hover:bg-[#237FE3] hover:border-[#237FE3] transition-all duration-300 shadow-sm"
+                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#4F87FB] hover:border-[#4F87FB] transition-all duration-300 shadow-sm"
               >
                 <Youtube className="w-4 h-4" />
               </a>
@@ -96,13 +96,13 @@ export default function Footer() {
               Quick Links
             </h5>
             <ul className="space-y-3 text-xs sm:text-sm font-light text-[#BFD9FF]">
-              <li><a href="#" className="hover:text-[#69B2FF] transition-colors duration-200">Home</a></li>
-              <li><a href="#services" className="hover:text-[#69B2FF] transition-colors duration-200">Treatments</a></li>
-              <li><a href="#why-us" className="hover:text-[#69B2FF] transition-colors duration-200">About</a></li>
-              <li><a href="#about" className="hover:text-[#69B2FF] transition-colors duration-200">Doctor</a></li>
-              <li><a href="#gallery" className="hover:text-[#69B2FF] transition-colors duration-200">Gallery</a></li>
-              <li><a href="#reviews" className="hover:text-[#69B2FF] transition-colors duration-200">Reviews</a></li>
-              <li><a href="#book" className="hover:text-[#69B2FF] transition-colors duration-200">Contact</a></li>
+              <li><a href="#" className="hover:text-[#4F87FB] transition-colors duration-200">Home</a></li>
+              <li><a href="#services" className="hover:text-[#4F87FB] transition-colors duration-200">Treatments</a></li>
+              <li><a href="#why-us" className="hover:text-[#4F87FB] transition-colors duration-200">About</a></li>
+              <li><a href="#about" className="hover:text-[#4F87FB] transition-colors duration-200">Doctor</a></li>
+              <li><a href="#gallery" className="hover:text-[#4F87FB] transition-colors duration-200">Gallery</a></li>
+              <li><a href="#reviews" className="hover:text-[#4F87FB] transition-colors duration-200">Reviews</a></li>
+              <li><a href="#book" className="hover:text-[#4F87FB] transition-colors duration-200">Contact</a></li>
             </ul>
           </div>
 
@@ -112,13 +112,13 @@ export default function Footer() {
               Treatments
             </h5>
             <ul className="space-y-3 text-xs sm:text-sm font-body font-light text-[#BFD9FF]">
-              <li><a href="#services" className="hover:text-[#69B2FF] transition-colors duration-200">Dental Implants</a></li>
-              <li><a href="#services" className="hover:text-[#69B2FF] transition-colors duration-200">Root Canal Treatment</a></li>
-              <li><a href="#services" className="hover:text-[#69B2FF] transition-colors duration-200">Invisible Aligners</a></li>
-              <li><a href="#services" className="hover:text-[#69B2FF] transition-colors duration-200">Teeth Whitening</a></li>
-              <li><a href="#services" className="hover:text-[#69B2FF] transition-colors duration-200">Smile Makeover</a></li>
-              <li><a href="#services" className="hover:text-[#69B2FF] transition-colors duration-200">Pediatric Dentistry</a></li>
-              <li><a href="#services" className="hover:text-[#69B2FF] transition-colors duration-200">Wisdom Tooth Removal</a></li>
+              <li><a href="#services" className="hover:text-[#4F87FB] transition-colors duration-200">Dental Implants</a></li>
+              <li><a href="#services" className="hover:text-[#4F87FB] transition-colors duration-200">Root Canal Treatment</a></li>
+              <li><a href="#services" className="hover:text-[#4F87FB] transition-colors duration-200">Invisible Aligners</a></li>
+              <li><a href="#services" className="hover:text-[#4F87FB] transition-colors duration-200">Teeth Whitening</a></li>
+              <li><a href="#services" className="hover:text-[#4F87FB] transition-colors duration-200">Smile Makeover</a></li>
+              <li><a href="#services" className="hover:text-[#4F87FB] transition-colors duration-200">Pediatric Dentistry</a></li>
+              <li><a href="#services" className="hover:text-[#4F87FB] transition-colors duration-200">Wisdom Tooth Removal</a></li>
             </ul>
           </div>
 
@@ -129,23 +129,23 @@ export default function Footer() {
             </h5>
             <div className="space-y-5 text-xs sm:text-sm font-body font-light text-slate-300">
               <div className="flex gap-3.5 items-start">
-                <MapPin className="w-5 h-5 text-[#237FE3] shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#3B82F6] shrink-0 mt-0.5" />
                 <span className="leading-relaxed">{ADDRESS_VAL}</span>
               </div>
               <div className="flex gap-3.5 items-center">
-                <Phone className="w-4.5 h-4.5 text-[#237FE3] shrink-0" />
-                <a href={`tel:${PHONE_VAL}`} className="hover:text-[#69B2FF] transition-colors tracking-wide font-sans">
+                <Phone className="w-4.5 h-4.5 text-[#3B82F6] shrink-0" />
+                <a href={`tel:${PHONE_VAL}`} className="hover:text-[#4F87FB] transition-colors tracking-wide font-sans">
                   {PHONE_VAL}
                 </a>
               </div>
               <div className="flex gap-3.5 items-center">
-                <Mail className="w-4.5 h-4.5 text-[#237FE3] shrink-0" />
-                <a href={`mailto:${EMAIL_VAL}`} className="hover:text-[#69B2FF] transition-colors break-all">
+                <Mail className="w-4.5 h-4.5 text-[#3B82F6] shrink-0" />
+                <a href={`mailto:${EMAIL_VAL}`} className="hover:text-[#4F87FB] transition-colors break-all">
                   {EMAIL_VAL}
                 </a>
               </div>
               <div className="flex gap-3.5 items-start">
-                <Clock className="w-5 h-5 text-[#237FE3] shrink-0 mt-0.5" />
+                <Clock className="w-5 h-5 text-[#3B82F6] shrink-0 mt-0.5" />
                 <div className="space-y-0.5 leading-relaxed">
                   {HOURS_VAL.split('\n').map((line, idx) => (
                     <p key={idx}>{line}</p>
@@ -163,8 +163,8 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row gap-4 items-center justify-between text-xs font-body font-light text-white/40">
           <p className="select-none text-slate-400 text-center sm:text-left">© 2026 {NAME_VAL}. All Rights Reserved.</p>
           <div className="flex gap-6 text-slate-400 justify-center sm:justify-start">
-            <a href="#" className="hover:text-[#69B2FF] transition-colors duration-200">Privacy Policy</a>
-            <a href="#" className="hover:text-[#69B2FF] transition-colors duration-200">Terms of Service</a>
+            <a href="#" className="hover:text-[#4F87FB] transition-colors duration-200">Privacy Policy</a>
+            <a href="#" className="hover:text-[#4F87FB] transition-colors duration-200">Terms of Service</a>
           </div>
         </div>
       </div>

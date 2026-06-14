@@ -105,7 +105,7 @@ export default function Chatbot() {
               </div>
               
               <div className="text-left py-0.5 pr-2.5">
-                <p className="text-xs font-bold text-[#0A2540] leading-snug">Need Help?</p>
+                <p className="text-xs font-bold text-[#0A1F44] leading-snug">Need Help?</p>
                 <p className="text-[10px] font-semibold text-[#25D366] mt-0.5 whitespace-nowrap">Chat with us on WhatsApp</p>
               </div>
             </a>
@@ -144,7 +144,7 @@ export default function Chatbot() {
         title="Chat on WhatsApp"
       >
         {/* Safe Premium Hover Tooltip (Desktop only) */}
-        <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-[#0D1B2A] text-white text-[11px] font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-xl">
+        <span className="absolute right-16 top-1/2 -translate-y-1/2 bg-[#0A1F44] border border-[#BFD9FF]/20 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-xl">
           WhatsApp Clinic
         </span>
         

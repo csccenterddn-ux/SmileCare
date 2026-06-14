@@ -125,17 +125,17 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
   };
 
   return (
-    <section id="book" className="scroll-mt-24 relative py-20 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC] border-b border-[#E2E8F0] text-[#0A1628]">
+    <section id="book" className="scroll-mt-24 relative py-20 px-4 sm:px-6 lg:px-8 bg-[#F7FAFC] border-b border-[#E2E8F0] text-[#0A1F44]">
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column Section: Premium customizable contact details panel */}
           <div className="lg:col-span-5 space-y-8 text-left lg:sticky lg:top-28">
             <div>
-              <span className="text-xs font-extrabold tracking-widest text-[#237FE3] uppercase bg-[#F4F9FF] border border-[#BFD9FF] px-3.5 py-1.5 rounded-full inline-block mb-3.5 select-none font-bold">
+              <span className="text-xs font-extrabold tracking-widest text-[#3B82F6] uppercase bg-[#F7FAFC] border border-[#D8E5FF] px-3.5 py-1.5 rounded-full inline-block mb-3.5 select-none font-bold">
                 Contact Hub
               </span>
-              <h2 className="text-3xl sm:text-4xl font-heading font-black text-[#0A2540] tracking-tight mb-3.5">
+              <h2 className="text-3xl sm:text-4xl font-heading font-black text-[#0A1F44] tracking-tight mb-3.5">
                 Get In Touch
               </h2>
               <p className="text-sm sm:text-base text-slate-500 font-body font-light leading-relaxed">
@@ -147,12 +147,12 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
             <div className="space-y-4">
               
               {/* Clinic Address */}
-              <div className="flex gap-4 items-start bg-white border border-[#E2E8F0] rounded-[20px] p-4 sm:p-5 shadow-[0_2px_8px_rgba(15,23,42,0.015)] hover:border-[#237FE3]/30 hover:shadow-[0_8px_20px_rgba(35,127,227,0.04)] md:hover:translate-y-[-1px] transition-all duration-300">
-                <div className="w-10 h-10 rounded-full bg-[#F4F9FF] border border-[#BFD9FF]/40 text-[#237FE3] flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-[#237FE3]" />
+              <div className="flex gap-4 items-start bg-white border border-[#E2E8F0] rounded-[20px] p-4 sm:p-5 shadow-[0_2px_8px_rgba(15,23,42,0.015)] hover:border-[#4F87FB]/30 hover:shadow-[0_8px_20px_rgba(79,135,251,0.04)] md:hover:translate-y-[-1px] transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-[#F7FAFC] border border-[#D8E5FF] text-[#3B82F6] flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-[#3B82F6]" />
                 </div>
                 <div className="space-y-1">
-                  <span className="block text-xs font-extrabold text-[#237FE3] uppercase tracking-wider select-none">
+                  <span className="block text-xs font-extrabold text-[#3B82F6] uppercase tracking-wider select-none">
                     Clinic Address
                   </span>
                   <p className="text-sm sm:text-base font-sans font-medium text-slate-700 leading-relaxed whitespace-pre-line">
@@ -162,42 +162,42 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
               </div>
 
               {/* Phone Number */}
-              <div className="flex gap-4 items-start bg-white border border-[#E2E8F0] rounded-[20px] p-4 sm:p-5 shadow-[0_2px_8px_rgba(15,23,42,0.015)] hover:border-[#237FE3]/30 hover:shadow-[0_8px_20px_rgba(35,127,227,0.04)] md:hover:translate-y-[-1px] transition-all duration-300">
-                <div className="w-10 h-10 rounded-full bg-[#F4F9FF] border border-[#BFD9FF]/40 text-[#237FE3] flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-[#237FE3]" />
+              <div className="flex gap-4 items-start bg-white border border-[#E2E8F0] rounded-[20px] p-4 sm:p-5 shadow-[0_2px_8px_rgba(15,23,42,0.015)] hover:border-[#4F87FB]/30 hover:shadow-[0_8px_20px_rgba(79,135,251,0.04)] md:hover:translate-y-[-1px] transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-[#F7FAFC] border border-[#D8E5FF] text-[#3B82F6] flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 text-[#3B82F6]" />
                 </div>
                 <div className="space-y-1">
-                  <span className="block text-xs font-extrabold text-[#237FE3] uppercase tracking-wider select-none">
+                  <span className="block text-xs font-extrabold text-[#3B82F6] uppercase tracking-wider select-none">
                     Phone Number
                   </span>
-                  <a href={`tel:${PHONE_VAL}`} className="block text-sm sm:text-base font-sans font-bold text-[#0A2540] hover:text-[#237FE3] transition-colors tracking-wide">
+                  <a href={`tel:${PHONE_VAL}`} className="block text-sm sm:text-base font-sans font-bold text-[#0A1F44] hover:text-[#4F87FB] transition-colors tracking-wide">
                     {PHONE_VAL}
                   </a>
                 </div>
               </div>
 
               {/* Email Address */}
-              <div className="flex gap-4 items-start bg-white border border-[#E2E8F0] rounded-[20px] p-4 sm:p-5 shadow-[0_2px_8px_rgba(15,23,42,0.015)] hover:border-[#237FE3]/30 hover:shadow-[0_8px_20px_rgba(35,127,227,0.04)] md:hover:translate-y-[-1px] transition-all duration-300">
-                <div className="w-10 h-10 rounded-full bg-[#F4F9FF] border border-[#BFD9FF]/40 text-[#237FE3] flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-[#237FE3]" />
+              <div className="flex gap-4 items-start bg-white border border-[#E2E8F0] rounded-[20px] p-4 sm:p-5 shadow-[0_2px_8px_rgba(15,23,42,0.015)] hover:border-[#4F87FB]/30 hover:shadow-[0_8px_20px_rgba(79,135,251,0.04)] md:hover:translate-y-[-1px] transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-[#F7FAFC] border border-[#D8E5FF] text-[#3B82F6] flex items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5 text-[#3B82F6]" />
                 </div>
                 <div className="space-y-1">
-                  <span className="block text-xs font-extrabold text-[#237FE3] uppercase tracking-wider select-none">
+                  <span className="block text-xs font-extrabold text-[#3B82F6] uppercase tracking-wider select-none">
                     Email Address
                   </span>
-                  <a href={`mailto:${EMAIL_VAL}`} className="block text-sm sm:text-base font-sans font-bold text-[#0A2540] hover:text-[#237FE3] transition-colors break-all">
+                  <a href={`mailto:${EMAIL_VAL}`} className="block text-sm sm:text-base font-sans font-bold text-[#0A1F44] hover:text-[#4F87FB] transition-colors break-all">
                     {EMAIL_VAL}
                   </a>
                 </div>
               </div>
 
               {/* Clinic Hours */}
-              <div className="flex gap-4 items-start bg-white border border-[#E2E8F0] rounded-[20px] p-4 sm:p-5 shadow-[0_2px_8px_rgba(15,23,42,0.015)] hover:border-[#237FE3]/30 hover:shadow-[0_8px_20px_rgba(35,127,227,0.04)] md:hover:translate-y-[-1px] transition-all duration-300">
-                <div className="w-10 h-10 rounded-full bg-[#F4F9FF] border border-[#BFD9FF]/40 text-[#237FE3] flex items-center justify-center shrink-0">
-                  <Clock className="w-5 h-5 text-[#237FE3]" />
+              <div className="flex gap-4 items-start bg-white border border-[#E2E8F0] rounded-[20px] p-4 sm:p-5 shadow-[0_2px_8px_rgba(15,23,42,0.015)] hover:border-[#4F87FB]/30 hover:shadow-[0_8px_20px_rgba(79,135,251,0.04)] md:hover:translate-y-[-1px] transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-[#F7FAFC] border border-[#D8E5FF] text-[#3B82F6] flex items-center justify-center shrink-0">
+                  <Clock className="w-5 h-5 text-[#3B82F6]" />
                 </div>
                 <div className="space-y-1 w-full">
-                  <span className="block text-xs font-extrabold text-[#237FE3] uppercase tracking-wider select-none">
+                  <span className="block text-xs font-extrabold text-[#3B82F6] uppercase tracking-wider select-none">
                     Clinic Hours
                   </span>
                   <div className="text-sm sm:text-base font-sans font-medium text-slate-700 leading-relaxed space-y-1">
@@ -229,7 +229,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 shadow-[0_10px_30px_rgba(15,23,42,0.03)] border border-[#E2E8F0]">
             <div>
               <h3 className="text-2xl sm:text-3xl font-heading font-black text-[#0A1628] text-left mb-2 select-none flex items-center gap-2">
-                <Clipboard className="w-6 h-6 text-[#237FE3]" />
+                <Clipboard className="w-6 h-6 text-[#3B82F6]" />
                 Book Your Consultation
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 font-body leading-relaxed text-left mb-6">
@@ -238,8 +238,8 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
             </div>
 
             {isBooked ? (
-              <div className="bg-[#F4F9FF] border border-[#BFD9FF]/40 rounded-2xl p-6 text-center max-w-md mx-auto">
-                <div className="w-12 h-12 rounded-full bg-[#F4F9FF] border border-[#BFD9FF]/60 text-[#237FE3] flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#F7FAFC] border border-[#D8E5FF] rounded-2xl p-6 text-center max-w-md mx-auto">
+                <div className="w-12 h-12 rounded-full bg-[#F7FAFC] border border-[#D8E5FF] text-[#3B82F6] flex items-center justify-center mx-auto mb-4">
                   <span className="text-xl font-bold">✓</span>
                 </div>
                 <h4 className="text-base font-heading font-bold text-[#0A1628] mb-2">Slot Scheduled Successfully!</h4>
@@ -249,7 +249,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                 <button
                   type="button"
                   onClick={() => setIsBooked(false)}
-                  className="px-6 py-2 rounded-full bg-[#237FE3] text-white text-xs font-bold hover:bg-[#69B2FF] transition-all shadow-md shadow-[#237FE3]/20 cursor-pointer animate-none"
+                  className="px-6 py-2 rounded-full bg-[#4F87FB] text-white text-xs font-bold hover:bg-[#3B78F0] transition-all shadow-md shadow-[#4F87FB]/20 cursor-pointer animate-none"
                 >
                   Book another slot
                 </button>
@@ -260,7 +260,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                 {/* Full Name input field */}
                 <div>
                   <label className="text-[11px] font-bold text-[#475569] uppercase tracking-wide mb-1.5 flex items-center gap-1.5 select-none">
-                    <User className="w-3.5 h-3.5 text-[#237FE3]" />
+                    <User className="w-3.5 h-3.5 text-[#3B82F6]" />
                     Full Name
                   </label>
                   <input 
@@ -271,7 +271,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                       setFullName(e.target.value);
                       if (errors.fullName) setErrors(prev => ({ ...prev, fullName: '' }));
                     }}
-                    className={`w-full px-4 py-2.5 rounded-xl bg-white border text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#237FE3]/12 focus:border-[#237FE3] transition-all duration-200 ${
+                    className={`w-full px-4 py-2.5 rounded-xl bg-white border text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#3B82F6]/15 focus:border-[#3B82F6] transition-all duration-200 ${
                       errors.fullName ? 'border-rose-500' : 'border-[#E2E8F0]'
                     }`}
                   />
@@ -282,7 +282,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="text-[11px] font-bold text-[#475569] uppercase tracking-wide mb-1.5 flex items-center gap-1.5 select-none">
-                      <Phone className="w-3.5 h-3.5 text-[#237FE3]" />
+                      <Phone className="w-3.5 h-3.5 text-[#3B82F6]" />
                       Mobile Number
                     </label>
                     <input 
@@ -293,7 +293,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                         setMobileNumber(e.target.value);
                         if (errors.mobileNumber) setErrors(prev => ({ ...prev, mobileNumber: '' }));
                       }}
-                      className={`w-full px-4 py-2.5 rounded-xl bg-white border text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#237FE3]/12 focus:border-[#237FE3] transition-all duration-200 ${
+                      className={`w-full px-4 py-2.5 rounded-xl bg-white border text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#3B82F6]/15 focus:border-[#3B82F6] transition-all duration-200 ${
                         errors.mobileNumber ? 'border-rose-500' : 'border-[#E2E8F0]'
                       }`}
                     />
@@ -301,7 +301,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                   </div>
                   <div>
                     <label className="text-[11px] font-bold text-[#475569] uppercase tracking-wide mb-1.5 flex items-center gap-1.5 select-none">
-                      <Mail className="w-3.5 h-3.5 text-[#237FE3]" />
+                      <Mail className="w-3.5 h-3.5 text-[#3B82F6]" />
                       Email Address <span className="text-slate-400 font-normal italic lowercase">(optional)</span>
                     </label>
                     <input 
@@ -312,7 +312,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                         setEmailAddress(e.target.value);
                         if (errors.emailAddress) setErrors(prev => ({ ...prev, emailAddress: '' }));
                       }}
-                      className={`w-full px-4 py-2.5 rounded-xl bg-white border text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#237FE3]/12 focus:border-[#237FE3] transition-all duration-200 ${
+                      className={`w-full px-4 py-2.5 rounded-xl bg-white border text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#3B82F6]/15 focus:border-[#3B82F6] transition-all duration-200 ${
                         errors.emailAddress ? 'border-rose-500' : 'border-[#E2E8F0]'
                       }`}
                     />
@@ -324,7 +324,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="text-[11px] font-bold text-[#475569] uppercase tracking-wide mb-1.5 flex items-center gap-1.5 select-none">
-                      <Calendar className="w-3.5 h-3.5 text-[#237FE3]" />
+                      <Calendar className="w-3.5 h-3.5 text-[#3B82F6]" />
                       Preferred Date
                     </label>
                     <input 
@@ -336,7 +336,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                         setPreferredDate(e.target.value);
                         if (errors.preferredDate) setErrors(prev => ({ ...prev, preferredDate: '' }));
                       }}
-                      className={`w-full px-4 py-2.5 rounded-xl bg-white border text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#237FE3]/12 focus:border-[#237FE3] transition-all duration-200 ${
+                      className={`w-full px-4 py-2.5 rounded-xl bg-white border text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#3B82F6]/15 focus:border-[#3B82F6] transition-all duration-200 ${
                         errors.preferredDate ? 'border-rose-500' : 'border-[#E2E8F0]'
                       }`}
                     />
@@ -344,7 +344,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                   </div>
                   <div>
                     <label className="text-[11px] font-bold text-[#475569] uppercase tracking-wide mb-1.5 flex items-center gap-1.5 select-none">
-                      <Clock className="w-3.5 h-3.5 text-[#237FE3]" />
+                      <Clock className="w-3.5 h-3.5 text-[#3B82F6]" />
                       Preferred Time
                     </label>
                     <select 
@@ -353,7 +353,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                         setPreferredTime(e.target.value);
                         if (errors.preferredTime) setErrors(prev => ({ ...prev, preferredTime: '' }));
                       }}
-                      className={`w-full px-4 py-3 rounded-xl bg-white border text-[#0A1628] font-body text-xs focus:outline-none focus:ring-3 focus:ring-[#237FE3]/12 focus:border-[#237FE3] transition-all duration-200 ${
+                      className={`w-full px-4 py-3 rounded-xl bg-white border text-[#0A1628] font-body text-xs focus:outline-none focus:ring-3 focus:ring-[#3B82F6]/15 focus:border-[#3B82F6] transition-all duration-200 ${
                         errors.preferredTime ? 'border-rose-500' : 'border-[#E2E8F0]'
                       }`}
                     >
@@ -376,7 +376,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                 {/* Treatment needed */}
                 <div>
                   <label className="text-[11px] font-bold text-[#475569] uppercase tracking-wide mb-1.5 flex items-center gap-1.5 select-none">
-                    <Clipboard className="w-3.5 h-3.5 text-[#237FE3]" />
+                    <Clipboard className="w-3.5 h-3.5 text-[#3B82F6]" />
                     Treatment Needed
                   </label>
                   <select 
@@ -385,7 +385,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                       setTreatmentNeeded(e.target.value);
                       if (errors.treatmentNeeded) setErrors(prev => ({ ...prev, treatmentNeeded: '' }));
                     }}
-                    className={`w-full px-4 py-3 rounded-xl bg-white border text-[#0A1628] font-body text-xs focus:outline-none focus:ring-3 focus:ring-[#237FE3]/12 focus:border-[#237FE3] transition-all duration-200 ${
+                    className={`w-full px-4 py-3 rounded-xl bg-white border text-[#0A1628] font-body text-xs focus:outline-none focus:ring-3 focus:ring-[#3B82F6]/15 focus:border-[#3B82F6] transition-all duration-200 ${
                       errors.treatmentNeeded ? 'border-rose-500' : 'border-[#E2E8F0]'
                     }`}
                   >
@@ -407,7 +407,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                 {/* Message (Optional) */}
                 <div>
                   <label className="text-[11px] font-bold text-[#475569] uppercase tracking-wide mb-1.5 flex items-center gap-1.5 select-none">
-                    <MessageSquare className="w-3.5 h-3.5 text-[#237FE3]" />
+                    <MessageSquare className="w-3.5 h-3.5 text-[#3B82F6]" />
                     Message <span className="text-slate-400 font-normal italic lowercase">(optional)</span>
                   </label>
                   <textarea 
@@ -415,7 +415,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     rows={3}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#237FE3]/12 focus:border-[#237FE3] resize-none hover:border-slate-300"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#E2E8F0] text-[#0A1628] font-body text-xs sm:text-sm focus:outline-none focus:ring-3 focus:ring-[#3B82F6]/15 focus:border-[#3B82F6] resize-none hover:border-slate-300"
                   />
                 </div>
 
@@ -423,7 +423,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 mt-2 rounded-full bg-[#237FE3] text-white font-body font-bold text-xs sm:text-sm tracking-wide shadow-lg shadow-[#237FE3]/15 hover:bg-[#69B2FF] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-85 disabled:cursor-not-allowed border-none"
+                  className="w-full py-4 mt-2 rounded-full bg-[#4F87FB] text-white font-body font-bold text-xs sm:text-sm tracking-wide shadow-lg shadow-[#4F87FB]/15 hover:bg-[#3B78F0] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-85 disabled:cursor-not-allowed border-none"
                 >
                   {isSubmitting ? (
                     <>
@@ -443,7 +443,7 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                   <p className="text-[10px] text-[#64748B] leading-relaxed">
                     Your information remains private and is used only for appointment coordination.
                   </p>
-                  <a href="#" className="text-[9px] text-[#237FE3] hover:underline font-medium block">
+                  <a href="#" className="text-[9px] text-[#4F87FB] hover:underline font-medium block">
                     Privacy Policy
                   </a>
                 </div>

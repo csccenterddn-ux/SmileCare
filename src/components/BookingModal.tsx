@@ -71,20 +71,20 @@ function CustomDropdown({
         onClick={() => setIsOpen(!isOpen)}
         animate={shouldHighlight ? {
           scale: [1, 1.025, 0.985, 1.015, 1],
-          borderColor: ["#E2E8F0", "#69B2FF", "#237FE3", "#69B2FF", "#E2E8F0"],
+          borderColor: ["#E2E8F0", "#4F87FB", "#3B82F6", "#4F87FB", "#E2E8F0"],
           boxShadow: [
-            "0 0 0 0 rgba(35, 127, 227, 0)",
-            "0 0 0 6px rgba(35, 127, 227, 0.25)",
-            "0 0 0 4px rgba(35, 127, 227, 0.15)",
-            "0 0 0 6px rgba(35, 127, 227, 0.25)",
-            "0 0 0 0 rgba(35, 127, 227, 0)"
+            "0 0 0 0 rgba(79, 135, 251, 0)",
+            "0 0 0 6px rgba(79, 135, 251, 0.25)",
+            "0 0 0 4px rgba(79, 135, 251, 0.15)",
+            "0 0 0 6px rgba(79, 135, 251, 0.25)",
+            "0 0 0 0 rgba(79, 135, 251, 0)"
           ]
         } : {}}
         transition={shouldHighlight ? {
           duration: 1.4,
           ease: "easeInOut"
         } : undefined}
-        className={`w-full flex items-center justify-between pl-3.5 pr-4 py-2.5 bg-slate-50/50 border rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#237FE3]/10 focus:border-[#237FE3] transition-all duration-200 cursor-pointer text-left ${
+        className={`w-full flex items-center justify-between pl-3.5 pr-4 py-2.5 bg-slate-50/50 border rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#4F87FB]/10 focus:border-[#4F87FB] transition-all duration-200 cursor-pointer text-left ${
           error ? 'border-rose-450 bg-rose-50/5' : 'border-[#E2E8F0] hover:border-slate-300'
         }`}
       >
@@ -112,12 +112,12 @@ function CustomDropdown({
                   onClick={() => handleSelect(opt)}
                   className={`w-full flex items-center justify-between px-4 py-2 text-left text-xs sm:text-[13px] font-sans font-semibold transition-colors duration-150 cursor-pointer ${
                     isSelected 
-                      ? 'bg-slate-50 text-[#237FE3]' 
+                      ? 'bg-slate-50 text-[#3B82F6]' 
                       : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'
                   }`}
                 >
                   <span className="truncate">{opt}</span>
-                  {isSelected && <Check className="w-3.5 h-3.5 text-[#237FE3] stroke-[2.5] shrink-0 ml-2" />}
+                  {isSelected && <Check className="w-3.5 h-3.5 text-[#3B82F6] stroke-[2.5] shrink-0 ml-2" />}
                 </button>
               );
             })}
@@ -313,7 +313,7 @@ export default function BookingModal({
               
               {/* Header Section */}
               <div className="mb-5 sm:mb-6 text-left">
-                <h3 className="text-xl sm:text-[22px] font-heading font-extrabold text-[#0A1628] tracking-tight">
+                <h3 className="text-xl sm:text-[22px] font-heading font-extrabold text-[#0A1F44] tracking-tight">
                   Schedule Your Consultation
                 </h3>
                 <p className="text-xs sm:text-[13px] text-slate-500 font-sans mt-1.5 leading-relaxed font-semibold max-w-xl">
@@ -323,15 +323,15 @@ export default function BookingModal({
                 {/* Highly refined premium trust-chip row directly below subheadline */}
                 <div className="hidden sm:flex flex-wrap items-center gap-2 mt-3.5 pt-3.5 border-t border-slate-100/80">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50/50 border border-slate-100 text-[10px] sm:text-[11px] font-bold text-slate-600">
-                    <Check className="w-3.5 h-3.5 text-[#237FE3] stroke-[3]" />
+                    <Check className="w-3.5 h-3.5 text-[#3B82F6] stroke-[3]" />
                     <span>12,000+ Patients Treated</span>
                   </div>
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50/50 border border-slate-100 text-[10px] sm:text-[11px] font-bold text-slate-600">
-                    <Check className="w-3.5 h-3.5 text-[#237FE3] stroke-[3]" />
+                    <Check className="w-3.5 h-3.5 text-[#3B82F6] stroke-[3]" />
                     <span>1,248+ Verified Reviews</span>
                   </div>
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50/50 border border-slate-100 text-[10px] sm:text-[11px] font-bold text-slate-600">
-                    <Check className="w-3.5 h-3.5 text-[#237FE3] stroke-[3]" />
+                    <Check className="w-3.5 h-3.5 text-[#3B82F6] stroke-[3]" />
                     <span>15+ Years Experience</span>
                   </div>
                 </div>
@@ -345,8 +345,8 @@ export default function BookingModal({
                   {/* Full Name field */}
                   <div className="space-y-1.5 text-left">
                     <label className="block text-[10px] sm:text-[11px] font-sans font-extrabold text-slate-500 uppercase tracking-wider ml-0.5 flex items-center gap-1.5 select-none font-body">
-                      <User className="w-3.5 h-3.5 text-[#237FE3] shrink-0 stroke-[2.5]" />
-                      <span>Full Name <span className="text-[#237FE3] font-extrabold">*</span></span>
+                      <User className="w-3.5 h-3.5 text-[#3B82F6] shrink-0 stroke-[2.5]" />
+                      <span>Full Name <span className="text-[#3B82F6] font-extrabold">*</span></span>
                     </label>
                     <div className="relative">
                       <input
@@ -356,7 +356,7 @@ export default function BookingModal({
                         placeholder="Enter your full name"
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
-                        className={`w-full px-3.5 py-2.5 bg-slate-50/50 border rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#237FE3]/10 focus:border-[#237FE3] transition-all duration-200 ${
+                        className={`w-full px-3.5 py-2.5 bg-slate-50/50 border rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#4F87FB]/10 focus:border-[#4F87FB] transition-all duration-200 ${
                           errors.fullName ? 'border-rose-400 bg-rose-50/10' : 'border-[#E2E8F0] hover:border-slate-300'
                         }`}
                       />
@@ -369,8 +369,8 @@ export default function BookingModal({
                   {/* Mobile Number field */}
                   <div className="space-y-1.5 text-left">
                     <label className="block text-[10px] sm:text-[11px] font-sans font-extrabold text-slate-500 uppercase tracking-wider ml-0.5 flex items-center gap-1.5 select-none font-body">
-                      <Phone className="w-3.5 h-3.5 text-[#237FE3] shrink-0 stroke-[2.5]" />
-                      <span>Mobile Number <span className="text-[#237FE3] font-extrabold">*</span></span>
+                      <Phone className="w-3.5 h-3.5 text-[#3B82F6] shrink-0 stroke-[2.5]" />
+                      <span>Mobile Number <span className="text-[#3B82F6] font-extrabold">*</span></span>
                     </label>
                     <div className="relative">
                       <input
@@ -379,7 +379,7 @@ export default function BookingModal({
                         placeholder="+91 Mobile Number"
                         value={mobileNumber}
                         onChange={(e) => setMobileNumber(e.target.value)}
-                        className={`w-full px-3.5 py-2.5 bg-slate-50/50 border rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#237FE3]/10 focus:border-[#237FE3] transition-all duration-200 ${
+                        className={`w-full px-3.5 py-2.5 bg-slate-50/50 border rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#4F87FB]/10 focus:border-[#4F87FB] transition-all duration-200 ${
                           errors.mobileNumber ? 'border-rose-400 bg-rose-50/10' : 'border-[#E2E8F0] hover:border-slate-300'
                         }`}
                       />
@@ -397,8 +397,8 @@ export default function BookingModal({
                   {/* Treatment Needed Dropdown */}
                   <div className="space-y-1.5 text-left">
                     <label className="block text-[10px] sm:text-[11px] font-sans font-extrabold text-slate-500 uppercase tracking-wider ml-0.5 flex items-center gap-1.5 select-none font-body">
-                      <Clipboard className="w-3.5 h-3.5 text-[#237FE3] shrink-0 stroke-[2.5]" />
-                      <span>Treatment Needed <span className="text-[#237FE3] font-extrabold">*</span></span>
+                      <Clipboard className="w-3.5 h-3.5 text-[#3B82F6] shrink-0 stroke-[2.5]" />
+                      <span>Treatment Needed <span className="text-[#3B82F6] font-extrabold">*</span></span>
                     </label>
                     <CustomDropdown
                       value={treatmentNeeded}
@@ -419,8 +419,8 @@ export default function BookingModal({
                   {/* Preferred Date Field */}
                   <div className="space-y-1.5 text-left">
                     <label className="block text-[10px] sm:text-[11px] font-sans font-extrabold text-slate-500 uppercase tracking-wider ml-0.5 flex items-center gap-1.5 select-none font-body">
-                      <Calendar className="w-3.5 h-3.5 text-[#237FE3] shrink-0 stroke-[2.5]" />
-                      <span>Preferred Date <span className="text-[#237FE3] font-extrabold">*</span></span>
+                      <Calendar className="w-3.5 h-3.5 text-[#3B82F6] shrink-0 stroke-[2.5]" />
+                      <span>Preferred Date <span className="text-[#3B82F6] font-extrabold">*</span></span>
                     </label>
                     <div className="relative">
                       <input
@@ -429,7 +429,7 @@ export default function BookingModal({
                         min={minDateString}
                         value={preferredDate}
                         onChange={(e) => setPreferredDate(e.target.value)}
-                        className={`w-full px-3.5 py-2.5 bg-slate-50/50 border rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#237FE3]/10 focus:border-[#237FE3] transition-all duration-200 ${
+                        className={`w-full px-3.5 py-2.5 bg-slate-50/50 border rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#4F87FB]/10 focus:border-[#4F87FB] transition-all duration-200 ${
                           errors.preferredDate ? 'border-rose-400 bg-rose-50/10' : 'border-[#E2E8F0] hover:border-slate-300'
                         }`}
                       />
@@ -444,7 +444,7 @@ export default function BookingModal({
                 {/* Row 3: Preferred Time Custom Dropdown */}
                 <div className="space-y-1.5 text-left">
                   <label className="block text-[10px] sm:text-[11px] font-sans font-extrabold text-slate-500 uppercase tracking-wider ml-0.5 flex items-center gap-1.5 select-none font-body font-bold">
-                    <Clock className="w-3.5 h-3.5 text-[#237FE3] shrink-0 stroke-[2.5]" />
+                    <Clock className="w-3.5 h-3.5 text-[#3B82F6] shrink-0 stroke-[2.5]" />
                     <span>Preferred Time</span>
                   </label>
                   <CustomDropdown
@@ -458,7 +458,7 @@ export default function BookingModal({
                 {/* Row 4: Message (Optional) field */}
                 <div className="space-y-1.5 text-left">
                   <label className="block text-[10px] sm:text-[11px] font-sans font-extrabold text-slate-500 uppercase tracking-wider ml-0.5 flex items-center gap-1.5 select-none font-body">
-                    <MessageSquare className="w-3.5 h-3.5 text-[#237FE3] shrink-0 stroke-[2.5]" />
+                    <MessageSquare className="w-3.5 h-3.5 text-[#3B82F6] shrink-0 stroke-[2.5]" />
                     <span>Message <span className="text-slate-400 text-[10px] lowercase font-normal italic">(optional)</span></span>
                   </label>
                   <div className="relative">
@@ -467,7 +467,7 @@ export default function BookingModal({
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       rows={2}
-                      className="w-full px-3.5 py-2.5 bg-slate-50/50 border border-[#E2E8F0] rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#237FE3]/10 focus:border-[#237FE3] transition-all duration-250 resize-none hover:border-slate-300"
+                      className="w-full px-3.5 py-2.5 bg-slate-50/50 border border-[#E2E8F0] rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#4F87FB]/10 focus:border-[#4F87FB] transition-all duration-250 resize-none hover:border-slate-300"
                     />
                   </div>
                 </div>
@@ -479,7 +479,7 @@ export default function BookingModal({
                     disabled={isSubmitting}
                     whileHover={{ y: -0.5, scale: 1.002 }}
                     whileTap={{ scale: 0.995 }}
-                    className="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#237FE3] hover:bg-[#69B2FF] text-white text-xs sm:text-sm font-sans font-extrabold rounded-xl shadow-md transition-all duration-200 select-none cursor-pointer text-center"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#4F87FB] hover:bg-[#3B78F0] text-white text-xs sm:text-sm font-sans font-extrabold rounded-xl shadow-md transition-all duration-200 select-none cursor-pointer text-center"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center gap-2">

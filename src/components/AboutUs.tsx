@@ -56,7 +56,7 @@ export default function AboutUs() {
           <div className="lg:col-span-5 relative w-full flex justify-center lg:block">
             
             {/* Visual background ambient glow decor wrapper */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#0A2540]/5 to-[#237FE3]/5 rounded-[24px] -rotate-2 scale-102 z-0 max-w-md lg:max-w-none mx-auto w-full" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#0A1F44]/5 to-[#3B82F6]/5 rounded-[24px] -rotate-2 scale-102 z-0 max-w-md lg:max-w-none mx-auto w-full" />
             
             {/* Main Interactive Zoomable Container */}
             <motion.div 
@@ -64,7 +64,7 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="relative rounded-[24px] overflow-hidden shadow-[0_20px_50px_rgba(10,37,64,0.08)] border border-[#E2E8F0] max-w-md lg:max-w-none mx-auto z-10 group"
+              className="relative rounded-[24px] overflow-hidden shadow-[0_20px_50px_rgba(10,31,68,0.08)] border border-[#E2E8F0] max-w-md lg:max-w-none mx-auto z-10 group"
             >
               <div className="overflow-hidden h-[450px]">
                 <motion.img 
@@ -81,14 +81,14 @@ export default function AboutUs() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="absolute left-6 top-12 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-[0_12px_24px_rgba(10,37,64,0.12)] border border-[#237FE3]/10 flex items-center gap-3 z-20"
+                className="absolute left-6 top-12 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-[0_12px_24px_rgba(10,31,68,0.12)] border border-[#3B82F6]/10 flex items-center gap-3 z-20"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#F4F9FF] flex items-center justify-center text-[#237FE3] shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#F7FAFC] flex items-center justify-center text-[#4F87FB] shrink-0">
                   <span className="text-sm font-black">15+</span>
                 </div>
                 <div className="text-left font-sans">
                   <p className="text-[10px] font-bold text-[#64748B] uppercase tracking-wider">Experience</p>
-                  <p className="text-xs font-extrabold text-[#0A2540]">Years of Trust</p>
+                  <p className="text-xs font-extrabold text-[#0A1F44]">Years of Trust</p>
                 </div>
               </motion.div>
 
@@ -98,14 +98,14 @@ export default function AboutUs() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="absolute right-6 bottom-12 bg-[#0A2540]/95 backdrop-blur-md rounded-2xl p-4 shadow-[0_12px_24px_rgba(10,37,64,0.18)] border border-white/10 flex items-center gap-3 z-20 text-white"
+                className="absolute right-6 bottom-12 bg-[#0A1F44]/95 backdrop-blur-md rounded-2xl p-4 shadow-[0_12px_24px_rgba(10,31,68,0.18)] border border-white/10 flex items-center gap-3 z-20 text-white"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#237FE3] flex items-center justify-center text-white shrink-0 shadow-sm shadow-[#237FE3]/30">
+                <div className="w-10 h-10 rounded-xl bg-[#3B82F6] flex items-center justify-center text-white shrink-0 shadow-sm shadow-[#3B82F6]/30">
                   <Check className="w-5 h-5 stroke-[3]" />
                 </div>
                 <div className="text-left font-sans">
                   <p className="text-[10px] font-semibold text-white/70 uppercase tracking-wider">Patients</p>
-                  <p className="text-xs font-extrabold text-[#237FE3]">12,000+ Smiling</p>
+                  <p className="text-xs font-extrabold text-[#4F87FB]">12,000+ Smiling</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -115,12 +115,12 @@ export default function AboutUs() {
           <div className="lg:col-span-7 text-left flex flex-col justify-center">
             
             {/* badge */}
-            <span className="text-xs font-extrabold tracking-widest text-[#237FE3] uppercase bg-[#237FE3]/10 border border-[#237FE3]/20 px-4 py-1.5 rounded-full inline-block mb-4.5 max-w-fit shadow-xs select-none">
+            <span className="text-xs font-extrabold tracking-widest text-[#3B82F6] uppercase bg-[#3B82F6]/8 border border-[#3B82F6]/15 px-4 py-1.5 rounded-full inline-block mb-4.5 max-w-fit shadow-xs select-none">
               WHY CHOOSE US
             </span>
 
             {/* main titles heading and explanation paragraph */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[40px] lg:leading-[1.12] font-heading font-extrabold text-[#0A2540] tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-[40px] lg:leading-[1.12] font-heading font-extrabold text-[#0A1F44] tracking-tight mb-4">
               Why Dehradun Families Trust SmileCare Clinic
             </h2>
             
@@ -145,12 +145,12 @@ export default function AboutUs() {
                     className="flex flex-col sm:flex-row gap-4 items-start group"
                   >
                     {/* Icon enclosure */}
-                    <div className="w-10 h-10 rounded-xl bg-[#F4F9FF] border border-transparent group-hover:border-[#237FE3]/20 text-[#237FE3] flex items-center justify-center shrink-0 shadow-xs transition-all duration-300 group-hover:scale-105">
+                    <div className="w-10 h-10 rounded-xl bg-[#F7FAFC] border border-transparent group-hover:border-[#4F87FB]/25 text-[#3B82F6] flex items-center justify-center shrink-0 shadow-xs transition-all duration-300 group-hover:scale-105">
                       <IconComp className="w-5 h-5" strokeWidth={1.8} />
                     </div>
                     {/* Content */}
                     <div className="font-sans">
-                      <h4 className="text-sm font-heading font-extrabold text-[#0A2540] mb-1.5 tracking-tight group-hover:text-[#237FE3] transition-colors duration-300">
+                      <h4 className="text-sm font-heading font-extrabold text-[#0A1F44] mb-1.5 tracking-tight group-hover:text-[#4F87FB] transition-colors duration-300">
                         {hl.title}
                       </h4>
                       <p className="text-xs text-[#64748B] leading-relaxed font-normal">
@@ -174,7 +174,7 @@ export default function AboutUs() {
                   'Modern Technology & Precision Care'
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3 leading-normal font-sans">
-                    <div className="w-5 h-5 rounded-full bg-[#F4F9FF] text-[#237FE3] flex items-center justify-center shrink-0 border border-[#BFD9FF] shadow-xs">
+                    <div className="w-5 h-5 rounded-full bg-[#F7FAFC] text-[#4F87FB] flex items-center justify-center shrink-0 border border-[#D8E5FF] shadow-xs">
                       <Check className="w-3 h-3 stroke-[3.5]" />
                     </div>
                     <span className="text-slate-700 font-semibold text-xs sm:text-sm antialiased">{item}</span>
@@ -187,14 +187,14 @@ export default function AboutUs() {
             <div className="flex flex-row items-center gap-4 border-t border-slate-100 pt-7 font-sans">
               <a 
                 href="#book"
-                className="px-8 py-3.5 bg-[#237FE3] hover:bg-[#69B2FF] text-white font-bold text-center rounded-full text-xs shadow-md shadow-[#237FE3]/10 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
+                className="px-8 py-3.5 bg-[#4F87FB] hover:bg-[#3B78F0] text-white font-bold text-center rounded-full text-xs shadow-md shadow-[#4F87FB]/10 hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
                 Book Consultation
               </a>
               <a 
                 href="tel:+919876543210"
-                className="px-6 py-3.5 border border-[#0A2540] hover:border-[#237FE3] hover:text-[#237FE3] text-[#0A2540] font-bold text-center rounded-full text-xs bg-white transition-all duration-300 flex items-center justify-center gap-1.5"
+                className="px-6 py-3.5 border border-[#0A1F44] hover:border-[#4F87FB] hover:text-[#4F87FB] text-[#0A1F44] font-bold text-center rounded-full text-xs bg-white transition-all duration-300 flex items-center justify-center gap-1.5"
               >
                 <Phone className="w-3.5 h-3.5" />
                 Call Now
