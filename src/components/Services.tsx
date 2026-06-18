@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Sparkles, Smile, HeartPulse, Baby, Award, X, Check, Clock, Phone, Zap, Heart, Calendar } from 'lucide-react';
+import { Sparkles, Smile, HeartPulse, Baby, Award, X, Check, Clock, Phone, Zap, Heart, Calendar, Shield, Braces, Crown, Activity } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTreatment } from '../context/TreatmentContext';
 
@@ -165,24 +165,23 @@ const RootCanalIcon = ({ strokeWidth = 1.5, ...props }: React.SVGProps<SVGSVGEle
 
 const coreServices = [
   {
-    id: 'implants',
-    title: 'Dental Implants',
-    category: 'IMPLANT DENTISTRY',
-    description: 'Permanent tooth replacement solutions designed for strength, comfort, and a natural-looking smile.',
-    overview: 'Replace missing teeth and restore your complete chewing function with state-of-the-art dental implants. Designed to fuse with your natural bone, they provide a strong, permanent, and remarkably lifelike solution for long-term health and confidence.',
+    id: 'general',
+    title: 'General Dentistry',
+    category: 'PREVENTIVE CARE',
+    description: 'Comprehensive checkups, digital X-rays, and professional cleanings to maintain optimal oral health.',
+    overview: 'Your foundation for a lifetime of healthy smiles. General dentistry focuses on preventive care, early detection of issues, and thorough professional cleanings in a comfortable environment.',
     benefits: [
-      'Natural Appearance',
-      'Strong Bite Function',
-      'Long-Term Solution',
-      'Preserves Jaw Bone'
+      'Prevent Cavities',
+      'Detect Issues Early',
+      'Fresh, Clean Breath',
+      'Overall Health Protection'
     ],
-    duration: '2–3 Visits',
-    cost: '₹25,000 – ₹45,000',
-    recovery: '3–7 Days',
-    tech: ['Guided Surgery', '3D Imaging', 'Digital Planning'],
-    tags: ['Single Implant', 'Full Mouth', 'All-on-4'],
-    icon: ImplantIcon,
-    badge: 'FLAGSHIP TREATMENT'
+    duration: '45 - 60 Mins',
+    cost: '₹1,000 – ₹2,500',
+    recovery: 'Immediate (None)',
+    tech: ['Digital Intraoral Cameras', 'Ultrasonic Scaling', 'Zero-Radiation X-Rays'],
+    tags: ['Preventive', 'Cleanings', 'Regular Checkup'],
+    icon: Shield
   },
   {
     id: 'rootcanal',
@@ -201,26 +200,28 @@ const coreServices = [
     recovery: '1–2 Days',
     tech: ['Rotary Endodontics', 'Digital Apex Locators', 'Apex Micromotors'],
     tags: ['Pain-Free', 'Single Sitting', 'Microscope Aided'],
-    icon: RootCanalIcon
+    icon: RootCanalIcon,
+    badge: 'MOST POPULAR'
   },
   {
-    id: 'aligners',
-    title: 'Invisible Aligners',
-    category: 'ORTHODONTIC TREATMENT',
-    description: 'Straighten your teeth discreetly using clear aligner technology designed for comfort.',
-    overview: 'Straighten your teeth discreetly with modern clear aligner technology. These removable, custom-engineered aligners gently shift your teeth into perfect alignment without metal brackets, allowing you to maintain your active lifestyle and complete oral hygiene.',
+    id: 'implants',
+    title: 'Dental Implants',
+    category: 'IMPLANT DENTISTRY',
+    description: 'Permanent tooth replacement solutions designed for strength, comfort, and a natural-looking smile.',
+    overview: 'Replace missing teeth and restore your complete chewing function with state-of-the-art dental implants. Designed to fuse with your natural bone, they provide a strong, permanent, and remarkably lifelike solution for long-term health and confidence.',
     benefits: [
-      'Nearly Invisible',
-      'Comfortable Fit',
-      'Removable',
-      'Custom Treatment Plan'
+      'Natural Appearance',
+      'Strong Bite Function',
+      'Long-Term Solution',
+      'Preserves Jaw Bone'
     ],
-    duration: '3–6 Months',
-    cost: '₹45,000 – ₹95,000',
-    recovery: 'Minimal Recovery Required',
-    tech: ['Digital Smile Scan', 'AI Treatment Planning', '3D Simulation'],
-    tags: ['Clear Aligners', 'Removable', 'Comfort Fit'],
-    icon: AlignerIcon
+    duration: '2–3 Visits',
+    cost: '₹25,000 – ₹45,000',
+    recovery: '3–7 Days',
+    tech: ['Guided Surgery', '3D Imaging', 'Digital Planning'],
+    tags: ['Single Implant', 'Full Mouth', 'All-on-4'],
+    icon: ImplantIcon,
+    badge: 'FLAGSHIP TREATMENT'
   },
   {
     id: 'whitening',
@@ -258,8 +259,66 @@ const coreServices = [
     recovery: '1–3 Days',
     tech: ['Digital Smile Design Studio', 'Ultra-thin E-max Veneers', 'HD Digital Scanning'],
     tags: ['Veneers', 'Smile Design', 'Cosmetic Care'],
-    icon: Smile,
+    icon: MakeoverIcon,
     badge: 'PATIENT FAVORITE'
+  },
+  {
+    id: 'orthodontics',
+    title: 'Orthodontics',
+    category: 'ORTHODONTIC TREATMENT',
+    description: 'Traditional and modern braces to correct malocclusions and align teeth for a healthier bite.',
+    overview: 'Correct complex bite issues, dental crowding, and spacing with our advanced orthodontic solutions. We offer high-quality metal and ceramic self-ligating braces designed for faster, more comfortable teeth movement.',
+    benefits: [
+      'Corrects Bite Issues',
+      'Improves Jaw Alignment',
+      'Aesthetic Straightening',
+      'Prevents Wear on Teeth'
+    ],
+    duration: '12–18 Months',
+    cost: '₹25,000 – ₹55,000',
+    recovery: 'Slight Soreness initially',
+    tech: ['Self-Ligating Brackets', 'Digital Diagnostic Models', 'Memory-Shape Archwires'],
+    tags: ['Braces', 'Jaw Alignment', 'Traditional'],
+    icon: Braces
+  },
+  {
+    id: 'aligners',
+    title: 'Clear Aligners',
+    category: 'ORTHODONTIC TREATMENT',
+    description: 'Straighten your teeth discreetly using clear aligner technology designed for comfort.',
+    overview: 'Straighten your teeth discreetly with modern clear aligner technology. These removable, custom-engineered aligners gently shift your teeth into perfect alignment without metal brackets, allowing you to maintain your active lifestyle and complete oral hygiene.',
+    benefits: [
+      'Nearly Invisible',
+      'Comfortable Fit',
+      'Removable',
+      'Custom Treatment Plan'
+    ],
+    duration: '3–6 Months',
+    cost: '₹45,000 – ₹95,000',
+    recovery: 'Minimal Recovery Required',
+    tech: ['Digital Smile Scan', 'AI Treatment Planning', '3D Simulation'],
+    tags: ['Clear Aligners', 'Removable', 'Comfort Fit'],
+    icon: AlignerIcon,
+    badge: 'MODERN SOLUTION'
+  },
+  {
+    id: 'crowns',
+    title: 'Dental Crowns & Bridges',
+    category: 'RESTORATIVE DENTISTRY',
+    description: 'Restore damaged or missing teeth with custom porcelain crowns and durable dental bridges.',
+    overview: 'Protect fractured teeth and replace missing ones with custom porcelain crowns and dental bridges. Our premium restorations are color-matched to your natural teeth, restoring both your structural function and facial aesthetics.',
+    benefits: [
+      'Fortifies Damaged Teeth',
+      'Fills Tooth Gaps',
+      'Matches Natural Color',
+      'Ensures Stable Chewing'
+    ],
+    duration: '2 Visits',
+    cost: '₹6,000 – ₹18,000 per unit',
+    recovery: 'Minimal (1 day)',
+    tech: ['CAD/CAM Digital Milling', 'E-Max Ceramics', 'Digital Virtual Articulators'],
+    tags: ['Protective Crowns', 'Bridges', 'Restoration'],
+    icon: Crown
   },
   {
     id: 'pediatric',
@@ -279,6 +338,63 @@ const coreServices = [
     tech: ['Anxiety-free Enticements', 'Pain-free Gel Anesthesia', 'Fluoride Shield Coating'],
     tags: ['Kid Friendly', 'Preventive', 'No Fear'],
     icon: Baby
+  },
+  {
+    id: 'wisdom',
+    title: 'Wisdom Tooth Removal',
+    category: 'ORAL SURGERY',
+    description: 'Safe, pain-free tooth extraction for impacted or problematic third molars.',
+    overview: 'Get relief from painful or crowded third molars with our safe and comfortable wisdom tooth extractions. Using advanced anesthesia and micro-surgical techniques, we ensure a smooth, worry-free, and fast-healing procedure.',
+    benefits: [
+      'Relieves Chronic Pain',
+      'Prevents Tooth Crowding',
+      'Eliminates Risk of Infection',
+      'Protects Neighboring Teeth'
+    ],
+    duration: '1 Visit (45 Mins)',
+    cost: '₹4,000 – ₹10,000',
+    recovery: '3-5 Days',
+    tech: ['High-Torque Piezo Surgery', 'Atraumatic Extractions', 'PRF Platelet Rich Fibrin Healing'],
+    tags: ['Surgical Care', 'Impacted Tooth', 'Pain-Free Recovery'],
+    icon: Activity
+  },
+  {
+    id: 'gum',
+    title: 'Gum Treatment',
+    category: 'PERIODONTOLOGY',
+    description: 'Advanced treatments for gingivitis and periodontitis to protect teeth supporting tissues.',
+    overview: 'Combat swelling, bleeding gums, and periodontal bone loss with professional gum therapy. From deep cleaning scaling and root planing to laser-assisted gum disinfection, we restore the ultimate foundation of your teeth.',
+    benefits: [
+      'Stops Bleeding Gums',
+      'Reverses Gingivitis',
+      'Eliminates Bad Breath',
+      'Supports Tooth Stability'
+    ],
+    duration: '1-2 Visits',
+    cost: '₹3,000 – ₹8,000',
+    recovery: '1-2 Days',
+    tech: ['Surgical lasers', 'Sub-gingival scaling', 'Antibiotic gel placement'],
+    tags: ['Gum Therapy', 'Periodontitis Support', 'Fresh Breath'],
+    icon: HeartPulse
+  },
+  {
+    id: 'fullrehab',
+    title: 'Full Mouth Rehabilitation',
+    category: 'RESTORATIVE ESTHETICS',
+    description: 'A fully customized restorative treatment to rebuild your complete oral function and aesthetics.',
+    overview: 'Reclaim your confident chewing power and youthful appearance with a comprehensive full mouth reconstruction. We combine crowns, bridges, dental implants, and bite correction therapies to restore your complete dental health and structural function.',
+    benefits: [
+      'Complete Bite Harmony',
+      'Full Esthetic Renewal',
+      'Durable Structural Soundness',
+      'Reclaim Total Chewing Ability'
+    ],
+    duration: 'Customized Plan',
+    cost: '₹1,50,000 – ₹3,50,000',
+    recovery: 'Varies (By phases)',
+    tech: ['Full Arch digital mapping', '3D Bite simulation', 'Facial and smile coordination'],
+    tags: ['Bite Correction', 'Full Arch Restorative', 'Advanced smile renew'],
+    icon: Award
   }
 ];
 

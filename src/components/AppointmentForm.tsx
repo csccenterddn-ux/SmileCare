@@ -45,16 +45,18 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
   const [isBooked, setIsBooked] = useState(false);
 
   const treatmentValues = [
-    'General Checkup and Cleaning',
-    'Dental Implants',
+    'General Dentistry',
     'Root Canal Treatment',
-    'Invisible Aligners',
+    'Dental Implants',
     'Teeth Whitening',
     'Smile Makeover',
+    'Orthodontics',
+    'Clear Aligners',
+    'Dental Crowns & Bridges',
     'Pediatric Dentistry',
     'Wisdom Tooth Removal',
-    'Emergency Treatment',
-    'Not Sure, Need Advice'
+    'Gum Treatment',
+    'Full Mouth Rehabilitation'
   ];
 
   // Update treatment selector list when selected from other panels without scrolling
@@ -390,16 +392,18 @@ export default function AppointmentForm({ preselectedTreatment, onFormSubmit }: 
                     }`}
                   >
                     <option value="">Choose required service</option>
-                    <option value="General Checkup and Cleaning">General Checkup and Cleaning</option>
-                    <option value="Dental Implants">Dental Implants</option>
+                    <option value="General Dentistry">General Dentistry</option>
                     <option value="Root Canal Treatment">Root Canal Treatment</option>
-                    <option value="Invisible Aligners">Invisible Aligners</option>
+                    <option value="Dental Implants">Dental Implants</option>
                     <option value="Teeth Whitening">Teeth Whitening</option>
                     <option value="Smile Makeover">Smile Makeover</option>
+                    <option value="Orthodontics">Orthodontics</option>
+                    <option value="Clear Aligners">Clear Aligners</option>
+                    <option value="Dental Crowns & Bridges">Dental Crowns & Bridges</option>
                     <option value="Pediatric Dentistry">Pediatric Dentistry</option>
                     <option value="Wisdom Tooth Removal">Wisdom Tooth Removal</option>
-                    <option value="Emergency Treatment">Emergency Dental Care</option>
-                    <option value="Not Sure, Need Advice">Not Sure – Need Consultation</option>
+                    <option value="Gum Treatment">Gum Treatment</option>
+                    <option value="Full Mouth Rehabilitation">Full Mouth Rehabilitation</option>
                   </select>
                   {errors.treatmentNeeded && <span className="text-[10px] font-semibold text-rose-500 mt-0.5 inline-block">{errors.treatmentNeeded}</span>}
                 </div>

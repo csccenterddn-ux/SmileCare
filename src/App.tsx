@@ -168,9 +168,9 @@ export default function App() {
     setShowToast(true);
   };
 
-  const handleBookingModalSuccess = (details: { name: string; treatment: string; mobile: string }) => {
+  const handleBookingModalSuccess = (details: { name: string; treatment: string; mobile: string; patientType: string }) => {
     setToastMessage(`Consultation Requested!`);
-    setToastDetails(`Hi ${details.name}, we received your request for: ${details.treatment}. Our coordinator will Call / SMS you on ${details.mobile} very shortly.`);
+    setToastDetails(`Hi ${details.name} (${details.patientType}), we received your request for: ${details.treatment}. Our coordinator will Call / SMS you on ${details.mobile} very shortly.`);
     setShowToast(true);
   };
 

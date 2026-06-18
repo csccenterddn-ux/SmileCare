@@ -1,26 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, Calendar, User, Phone, Clock, Check, ChevronDown, Clipboard, MessageSquare } from 'lucide-react';
+import { X, Calendar, User, Phone, Clock, Check, ChevronDown, Clipboard, MessageSquare, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTreatment } from '../context/TreatmentContext';
 
 interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmitSuccess: (details: { name: string; treatment: string; mobile: string; date: string; time: string; message?: string }) => void;
+  onSubmitSuccess: (details: { name: string; treatment: string; mobile: string; date: string; time: string; message?: string; patientType: string }) => void;
   preselectedTreatment?: string;
 }
 
 const treatmentOptions = [
-  'General Checkup and Cleaning',
-  'Dental Implants',
+  'General Dentistry',
   'Root Canal Treatment',
-  'Invisible Aligners',
+  'Dental Implants',
   'Teeth Whitening',
   'Smile Makeover',
+  'Orthodontics',
+  'Clear Aligners',
+  'Dental Crowns & Bridges',
   'Pediatric Dentistry',
   'Wisdom Tooth Removal',
-  'Emergency Dental Care',
-  'Not Sure – Need Consultation'
+  'Gum Treatment',
+  'Full Mouth Rehabilitation'
 ];
 
 const timeSlotOptions = [
@@ -141,6 +143,7 @@ export default function BookingModal({
   const [preferredDate, setPreferredDate] = useState('');
   const [preferredTime, setPreferredTime] = useState('');
   const [message, setMessage] = useState('');
+  const [patientType, setPatientType] = useState<string>('New Patient');
   
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -212,6 +215,7 @@ export default function BookingModal({
       setPreferredDate('');
       setPreferredTime('');
       setMessage('');
+      setPatientType('New Patient');
       setErrors({});
 
       const timer = setTimeout(() => {
@@ -266,7 +270,8 @@ export default function BookingModal({
         mobile: mobileNumber.trim(),
         date: preferredDate,
         time: preferredTime || 'No Preference',
-        message: message.trim()
+        message: message.trim(),
+        patientType: patientType
       });
       handleClose();
     }, 900);
@@ -469,6 +474,69 @@ export default function BookingModal({
                       rows={2}
                       className="w-full px-3.5 py-2.5 bg-slate-50/50 border border-[#E2E8F0] rounded-xl text-slate-800 text-xs sm:text-[13px] font-sans font-semibold focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#4F87FB]/10 focus:border-[#4F87FB] transition-all duration-250 resize-none hover:border-slate-300"
                     />
+                  </div>
+                </div>
+
+                {/* Row 5: Patient Type Required Field */}
+                <div className="space-y-1.5 text-left">
+                  <label className="block text-[10px] sm:text-[11px] font-sans font-extrabold text-slate-500 uppercase tracking-wider ml-0.5 flex items-center gap-1.5 select-none font-body">
+                    <Users className="w-3.5 h-3.5 text-[#3B82F6] shrink-0 stroke-[2.5]" />
+                    <span>Patient Type <span className="text-[#3B82F6] font-extrabold">*</span></span>
+                  </label>
+                  <div className="flex flex-row items-center gap-6 mt-2 ml-0.5">
+                    <label className="flex items-center gap-2.5 cursor-pointer select-none group">
+                      <input
+                        type="radio"
+                        name="patientType"
+                        value="New Patient"
+                        checked={patientType === 'New Patient'}
+                        onChange={() => setPatientType('New Patient')}
+                        className="sr-only"
+                      />
+                      <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-all duration-200 bg-slate-50/50 ${
+                        patientType === 'New Patient' 
+                          ? 'border-[#3B82F6] bg-[#3B82F6]/5 ring-1 ring-[#3B82F6]' 
+                          : 'border-[#E2E8F0] group-hover:border-slate-400'
+                      }`}>
+                        {patientType === 'New Patient' ? (
+                          <div className="w-2 h-2 rounded-full bg-[#3B82F6] transition-all" />
+                        ) : (
+                          <div className="w-2 h-2 rounded-full bg-transparent transition-all" />
+                        )}
+                      </div>
+                      <span className={`text-xs sm:text-[13px] font-sans font-semibold transition-colors duration-200 ${
+                        patientType === 'New Patient' ? 'text-slate-950' : 'text-slate-600 group-hover:text-slate-900'
+                      }`}>
+                        New Patient
+                      </span>
+                    </label>
+
+                    <label className="flex items-center gap-2.5 cursor-pointer select-none group">
+                      <input
+                        type="radio"
+                        name="patientType"
+                        value="Existing Patient"
+                        checked={patientType === 'Existing Patient'}
+                        onChange={() => setPatientType('Existing Patient')}
+                        className="sr-only"
+                      />
+                      <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-all duration-200 bg-slate-50/50 ${
+                        patientType === 'Existing Patient' 
+                          ? 'border-[#3B82F6] bg-[#3B82F6]/5 ring-1 ring-[#3B82F6]' 
+                          : 'border-[#E2E8F0] group-hover:border-slate-400'
+                      }`}>
+                        {patientType === 'Existing Patient' ? (
+                          <div className="w-2 h-2 rounded-full bg-[#3B82F6] transition-all" />
+                        ) : (
+                          <div className="w-2 h-2 rounded-full bg-transparent transition-all" />
+                        )}
+                      </div>
+                      <span className={`text-xs sm:text-[13px] font-sans font-semibold transition-colors duration-200 ${
+                        patientType === 'Existing Patient' ? 'text-slate-950' : 'text-slate-600 group-hover:text-slate-900'
+                      }`}>
+                        Existing Patient
+                      </span>
+                    </label>
                   </div>
                 </div>
 
