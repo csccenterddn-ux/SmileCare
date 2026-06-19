@@ -214,7 +214,7 @@ export default function Gallery() {
         
         {/* Section Header */}
         <span className="text-xs font-bold tracking-widest text-[#3B82F6] uppercase bg-[#F7FAFC] border border-[#D8E5FF]/60 px-4 py-1.5 rounded-full inline-block mb-3.5 shadow-sm select-none">
-          CLINIC GALLERY
+          SMILE GALLERY
         </span>
         <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#0A1F44] tracking-tight leading-tight mb-4">
           {headingText}
