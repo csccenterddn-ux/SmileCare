@@ -163,6 +163,161 @@ const RootCanalIcon = ({ strokeWidth = 1.5, ...props }: React.SVGProps<SVGSVGEle
   </svg>
 );
 
+// Custom healthcare-grade dental shield / preventive care icon featuring a protective shield surrounding a tooth silhouette with star shine details
+const PreventiveIcon = ({ strokeWidth = 1.5, ...props }: React.SVGProps<SVGSVGElement> & { strokeWidth?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    {/* Outer elegant healthcare shield */}
+    <path d="M12 2S12 2 20 5V11C20 16.5 16.5 20.5 12 22C7.5 20.5 4 16.5 4 11V5C12 2 12 2 12 2Z" />
+    {/* Stylized Tooth Outline in the center */}
+    <path d="M9 8.5C9 7.3 9.8 6.5 11.2 6.5C12.3 6.5 12.7 7.2 13 7.2C13.3 7.2 13.7 6.5 14.8 6.5C16.2 6.5 17 7.3 17 8.5C17 10 16 11.2 15 11.8C15.6 13 16 14.5 16 15.6C16 17.5 14.8 19 13.8 19C13 19 12.7 17.8 12.4 16.2C12.2 15.4 12.1 14.6 12 14.6C11.9 14.6 11.8 15.4 11.6 16.2C11.3 17.8 11 19 10.2 19C9.2 19 8 17.5 8 15.6C8 14.5 8.4 13 9 11.8C8 11.2 7 10 7 8.5" opacity="0.85" />
+    {/* Micro-sparkle stars on the shield */}
+    <path d="M19.5 6L20 7L21 7.5L20 8L19.5 9L19 8L18 7.5L19 7Z" fill="currentColor" stroke="none" />
+  </svg>
+);
+
+// Custom healthcare-grade orthodontics braces / teeth alignment icon featuring aligned teeth with detailed bracket blocks and tension archwire
+const BracesIcon = ({ strokeWidth = 1.5, ...props }: React.SVGProps<SVGSVGElement> & { strokeWidth?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    {/* Three teeth side-by-side representing the dental arch */}
+    {/* Tooth 1 (Left) */}
+    <path d="M4 6C4 4.5 5 4 6.5 4C7.5 4 8 4.5 8.5 4.5C9 4.5 9.5 4 10.5 4C12 4 12.5 5 12.5 6.5C12.5 8.5 11.5 10 10.5 10H6.5C5.5 10 4 8.5 4 6Z" opacity="0.85" />
+    {/* Tooth 2 (Right) */}
+    <path d="M11.5 6C11.5 4.5 12.5 4 14 4C15 4 15.5 4.5 16 4.5C16.5 4.5 17 4 18 4C19.5 4 20 5 20 6.5C20 8.5 19 10 18 10H14C13 10 11.5 8.5 11.5 6Z" opacity="0.85" />
+
+    {/* Braces Tension Archwire running across */}
+    <path d="M2 7.5H22" strokeWidth={strokeWidth + 0.3} />
+
+    {/* Left Bracket */}
+    <rect x="5.5" y="6" width="3" height="3" rx="0.5" fill="none" stroke="currentColor" />
+    <path d="M7 5V10" />
+    <path d="M5 7.5H9" />
+
+    {/* Right Bracket */}
+    <rect x="13" y="6" width="3" height="3" rx="0.5" fill="none" stroke="currentColor" />
+    <path d="M14.5 5V10" />
+    <path d="M12.5 7.5H16.5" />
+
+    {/* Sparkle detailing for braces shine */}
+    <path d="M20 13.5L20.4 14.7L21.6 15L20.4 15.3L20 16.5L19.6 15.3L18.4 15L19.6 14.7Z" fill="currentColor" stroke="none" />
+    {/* Alignment tension path below */}
+    <path d="M3 13C6 16 18 16 21 13" strokeDasharray="2 2" opacity="0.6" />
+  </svg>
+);
+
+// Custom healthcare-grade wisdom tooth removal icon showing a third-molar tooth being elevated safely with micro-extraction vector details
+const WisdomToothIcon = ({ strokeWidth = 1.5, ...props }: React.SVGProps<SVGSVGElement> & { strokeWidth?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    {/* Grid / alignment boundary for surgery */}
+    <circle cx="12" cy="12" r="10" strokeDasharray="3 3" opacity="0.4" />
+    
+    {/* Tooth molar contour */}
+    <path d="M8 8C8 6.5 9 5.5 11 5.5C12.2 5.5 12.7 6.2 13.2 6.2C13.7 6.2 14.2 5.5 15.5 5.5C17.5 5.5 18.5 6.5 18.5 8C18.5 9.5 17.7 10.7 16.7 11.2C17.2 12.2 17.5 13.4 17.5 14.5C17.5 16.5 16.2 18 15.2 18C14.4 18 14.1 17 13.8 15.5C13.6 14.8 13.5 14.1 13.4 14.1C13.3 14.1 13.2 14.8 13 15.5C12.7 17 12.4 18 11.6 18C10.8 18 9.5 16.5 9.5 14.5C9.5 13.4 9.8 12.2 10.3 11.2C9.3 10.7 8.5 9.5 8.5 8" />
+    
+    {/* Extraction forceps/tension indications */}
+    <path d="M6 14H5C4 14 3 13 3 12C3 11 4 10 5 10H6" opacity="0.7" />
+    <path d="M18 14H19C20 14 21 13 21 12C21 11 20 10 19 10H18" opacity="0.7" />
+    
+    {/* Elevational arrow details representing extraction lift */}
+    <path d="M12 2.5V8.5" strokeWidth={strokeWidth + 0.3} />
+    <path d="M9.5 5L12 2.5L14.5 5" strokeWidth={strokeWidth + 0.3} />
+  </svg>
+);
+
+// Custom healthcare-grade gum treatment icon representing a tooth with its supporting gingiva archway and periodontal care scaling lines
+const GumIcon = ({ strokeWidth = 1.5, ...props }: React.SVGProps<SVGSVGElement> & { strokeWidth?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    {/* Tooth Molar sitting inside the gum */}
+    <path d="M8 6C8 4.8 9 4 10.8 4C11.8 4 12.2 4.7 12.5 4.7C12.8 4.7 13.2 4 14.2 4C16 4 17 4.8 17 6C17 7.5 16.2 8.5 15.3 9C15.8 10 16 11.2 16 12C16 13.5 15 14.5 14.2 14.5C13.5 14.5 13.2 13.5 13 12.2C12.8 11.5 12.7 11 12.5 11C12.3 11 12.2 11.5 12 12.2C11.8 13.5 11.5 14.5 10.8 14.5C10 14.5 9 13.5 9 12C9 11.2 9.2 10 9.7 9C8.8 8.5 8 7.5 8 6" opacity="0.5" />
+
+    {/* Premium gingival / gum line contour archway cradling the tooth roots */}
+    <path d="M3 14.5C4 13 6 12 8 12C10.5 12 11 14.5 12.5 14.5C14 14.5 14.5 12 17 12C19 12 21 13 22 14.5" strokeWidth={strokeWidth + 0.3} />
+    
+    {/* Sub-gingival / gum health cell texture lines */}
+    <path d="M3 18C4.5 16.5 6 15.5 8 15.5C10.5 15.5 11.5 17.5 13 17.5C14.5 17.5 15.5 15.5 18 15.5C20 15.5 21.5 16.5 23 18" opacity="0.8" />
+    
+    {/* Periodontal care laser healing indicator */}
+    <path d="M12.5 2v6.5" strokeWidth={strokeWidth} strokeDasharray="2 3" />
+    <path d="M9.5 20.5L12.5 17.5L15.5 20.5" strokeWidth={strokeWidth} />
+  </svg>
+);
+
+// Custom healthcare-grade full mouth rehabilitation icon representing dual complete upper and lower dental arches with bite alignment and cosmetic restoration details
+const SmileRehabIcon = ({ strokeWidth = 1.5, ...props }: React.SVGProps<SVGSVGElement> & { strokeWidth?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    {/* Upper Dental Arch */}
+    <path d="M4 8.5C5.8 5.5 18.2 5.5 20 8.5" strokeWidth={strokeWidth + 0.3} />
+    
+    {/* Lower Dental Arch */}
+    <path d="M4 14.5C5.8 17.5 18.2 17.5 20 14.5" strokeWidth={strokeWidth + 0.3} />
+
+    {/* Upper Teeth rebuilding segments */}
+    <path d="M5.5 8C6 7 7 6.5 8 6.5" />
+    <path d="M8.5 7.5C9 6.5 10 6 11 6" />
+    <path d="M11.5 7.5V6" />
+    <path d="M12.5 7.5V6" />
+    <path d="M13  6C14  6 15  6.5 15.5 7.5" />
+    <path d="M16 6.5C17 6.5 18 7 18.5 8" />
+
+    {/* Lower Teeth rebuilding segments */}
+    <path d="M5.5 15C6 16 7 16.5 8 16.5" />
+    <path d="M8.5 15.5C9 16.5 10 17 11 17" />
+    <path d="M11.5 15.5V17" />
+    <path d="M12.5 15.5V17" />
+    <path d="M13 17C14 17 15 16.5 15.5 15.5" />
+    <path d="M16 16.5C17 16.5 18 16 18.5 15" />
+
+    {/* Star sparkles showcasing dental brightness */}
+    <path d="M12 11.5L12.4 12.3L13.2 12.5L12.4 12.7L12 13.5L11.6 12.7L10.8 12.5L11.6 12.3Z" fill="currentColor" stroke="none" />
+    <path d="M19 10.5L19.2 11L19.7 11.1L19.2 11.2L19 11.7L18.8 11.2L18.3 11.1L18.8 11Z" fill="currentColor" stroke="none" />
+    <path d="M5 11.5L5.2 12L5.7 12.1L5.2 12.2L5 12.7L4.8 12.2L4.3 12.1L4.8 12L5 11.5Z" fill="currentColor" stroke="none" />
+  </svg>
+);
+
 const coreServices = [
   {
     id: 'general',
@@ -181,7 +336,7 @@ const coreServices = [
     recovery: 'Immediate (None)',
     tech: ['Digital Intraoral Cameras', 'Ultrasonic Scaling', 'Zero-Radiation X-Rays'],
     tags: ['Preventive', 'Cleanings', 'Regular Checkup'],
-    icon: Shield
+    icon: PreventiveIcon
   },
   {
     id: 'rootcanal',
@@ -279,7 +434,7 @@ const coreServices = [
     recovery: 'Slight Soreness initially',
     tech: ['Self-Ligating Brackets', 'Digital Diagnostic Models', 'Memory-Shape Archwires'],
     tags: ['Braces', 'Jaw Alignment', 'Traditional'],
-    icon: Braces
+    icon: BracesIcon
   },
   {
     id: 'aligners',
@@ -356,7 +511,7 @@ const coreServices = [
     recovery: '3-5 Days',
     tech: ['High-Torque Piezo Surgery', 'Atraumatic Extractions', 'PRF Platelet Rich Fibrin Healing'],
     tags: ['Surgical Care', 'Impacted Tooth', 'Pain-Free Recovery'],
-    icon: Activity
+    icon: WisdomToothIcon
   },
   {
     id: 'gum',
@@ -375,7 +530,7 @@ const coreServices = [
     recovery: '1-2 Days',
     tech: ['Surgical lasers', 'Sub-gingival scaling', 'Antibiotic gel placement'],
     tags: ['Gum Therapy', 'Periodontitis Support', 'Fresh Breath'],
-    icon: HeartPulse
+    icon: GumIcon
   },
   {
     id: 'fullrehab',
@@ -394,7 +549,7 @@ const coreServices = [
     recovery: 'Varies (By phases)',
     tech: ['Full Arch digital mapping', '3D Bite simulation', 'Facial and smile coordination'],
     tags: ['Bite Correction', 'Full Arch Restorative', 'Advanced smile renew'],
-    icon: Award
+    icon: SmileRehabIcon
   }
 ];
 
