@@ -96,28 +96,28 @@ const GALLERY_ITEMS: GalleryItem[] = [
     category: 'Implant Bridge Restoration',
     tab: 'before-after',
     imageUrl: '/before-after/implantbridges1.jpg',
-    aspect: 'video'
+    aspect: 'square'
   },
   {
     id: 101,
     category: 'Single Posterior Implant Restoration',
     tab: 'before-after',
     imageUrl: '/before-after/implantbridges-single1.jpg',
-    aspect: 'video'
+    aspect: 'square'
   },
   {
     id: 11,
     category: 'Advanced Full Bridge Restoration',
     tab: 'before-after',
     imageUrl: '/before-after/implantbridges4.jpg',
-    aspect: 'video'
+    aspect: 'square'
   },
   {
     id: 102,
     category: 'Single Implant Treatment Case',
     tab: 'before-after',
-    imageUrl: '/before-after/implantbridges-single4.jpg',
-    aspect: 'video'
+    imageUrl: '/before-after/implantbridges-single3.jpg',
+    aspect: 'square'
   },
   {
     id: 12,
@@ -145,7 +145,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     category: 'Full-Arch All-on-6 Rehabilitation',
     tab: 'before-after',
     imageUrl: '/before-after/allon6.webp',
-    aspect: 'video'
+    aspect: 'square'
   },
   {
     id: 19,
@@ -172,7 +172,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: 21,
     category: 'Single Tooth Implant Restoration',
     tab: 'before-after',
-    imageUrl: '/before-after/implantbridges-single3.jpg',
+    imageUrl: '/before-after/implantbridges-single4.jpg',
     aspect: 'square'
   }
 ];
@@ -189,14 +189,20 @@ export default function Gallery() {
     setCurrentPage(1);
   }, [activeTab]);
 
-  const filteredItems = activeTab === 'all' 
-    ? GALLERY_ITEMS 
+  const filteredItems = activeTab === 'all'
+    ? (() => {
+        const beforeAfter = GALLERY_ITEMS.filter(item => item.tab === 'before-after');
+        const others = GALLERY_ITEMS.filter(item => item.tab !== 'before-after');
+        const first6BeforeAfter = beforeAfter.slice(0, 6);
+        const restBeforeAfter = beforeAfter.slice(6);
+        return [...first6BeforeAfter, ...others, ...restBeforeAfter];
+      })()
     : GALLERY_ITEMS.filter(item => item.tab === activeTab);
 
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
   const displayedItems = filteredItems.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
-  const isBeforeAfter = activeTab === 'before-after';
+  const isBeforeAfter = activeTab === 'before-after' || activeTab === 'all';
   const headingText = isBeforeAfter ? 'Smile Transformations' : 'Inside SmileCare Clinic';
   const descriptionText = isBeforeAfter 
     ? 'Witness the breathtaking results of our specialized cosmetic and orthodontic treatments designed to restore confidence.'
