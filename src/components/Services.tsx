@@ -617,6 +617,17 @@ const iconVariants = {
 };
 
 export default function Services() {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const [activeService, setActiveService] = useState<typeof coreServices[number] | null>(null);
   const { activeTreatment, setActiveTreatment } = useTreatment();
   const hasManuallyClosed = useRef(false);
@@ -681,10 +692,10 @@ export default function Services() {
         
         {/* Section Header with Badge */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          initial={isMobile ? "show" : { opacity: 0, y: 20 }}
+          whileInView={isMobile ? "show" : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.05 }}
+          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-20"
         >
           <span className="text-[11px] font-bold tracking-widest text-[#3B82F6] uppercase bg-[#3B82F6]/8 border border-[#3B82F6]/15 px-4 py-1.5 rounded-full inline-block mb-4.5 shadow-sm select-none animate-pulse">
@@ -702,9 +713,9 @@ export default function Services() {
         <motion.div 
           id="services-grid" 
           variants={gridContainerVariants}
-          initial="hidden"
+          initial={isMobile ? "show" : "hidden"}
           whileInView="show"
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.05 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {coreServices.map((service) => {

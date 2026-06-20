@@ -3,9 +3,23 @@ import { Calendar, Phone, Star, Shield, Check, MessageSquare, Award, Flame } fro
 import { motion } from 'motion/react';
 
 export default function Hero() {
+  const [isMobile, setIsMobile] = useState(false);
   const [particles, setParticles] = useState<Array<{ id: number, left: string, top: string, delay: string, duration: string, size: string, opacity: number, yShift: number }>>([]);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) {
+      setParticles([]);
+      return;
+    }
     // Generate organic ambient particles - refined density for elegant polish
     const generated = Array.from({ length: 8 }).map((_, i) => ({
       id: i,
@@ -18,7 +32,7 @@ export default function Hero() {
       yShift: -(3 + Math.random() * 5), // Translate Y: 3px to 8px
     }));
     setParticles(generated);
-  }, []);
+  }, [isMobile]);
 
   return (
     <section 
@@ -31,20 +45,20 @@ export default function Hero() {
         {/* Soft curved organic shape 1 in top-right - Animate Left/Right (10px-20px range, 20-40s duration) */}
         <motion.div 
           className="absolute -top-[15%] -right-[10%] w-[70vw] h-[70vw] rounded-full bg-[#153973] opacity-[0.05] filter blur-[120px]" 
-          animate={{ x: [-15, 15, -15] }}
-          transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+          animate={isMobile ? undefined : { x: [-15, 15, -15] }}
+          transition={isMobile ? undefined : { duration: 30, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Soft organic wave blob in bottom-left - Animate Up/Down (10px-20px range, 20-40s duration) */}
         <motion.div 
           className="absolute -bottom-[20%] -left-[10%] w-[60vw] h-[60vw] rounded-full bg-[#3B82F6] opacity-[0.04] filter blur-[140px]" 
-          animate={{ y: [-15, 15, -15] }}
-          transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
+          animate={isMobile ? undefined : { y: [-15, 15, -15] }}
+          transition={isMobile ? undefined : { duration: 35, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Gentle deep organic shape in middle-left - Compound smooth movement */}
         <motion.div 
           className="absolute top-[25%] -left-[20%] w-[50vw] h-[50vw] rounded-[180px_90px_240px_120px] bg-[#102B59] rotate-12 opacity-[0.04] filter blur-[110px]" 
-          animate={{ x: [-10, 10, -10], y: [10, -10, 10] }}
-          transition={{ duration: 40, repeat: Infinity, ease: "easeInOut" }}
+          animate={isMobile ? undefined : { x: [-10, 10, -10], y: [10, -10, 10] }}
+          transition={isMobile ? undefined : { duration: 40, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
 
@@ -60,14 +74,14 @@ export default function Hero() {
         {/* Center: Soft Blue Glow shifting slowly (15-25 seconds) */}
         <motion.div 
           className="absolute top-[20%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-[#4F87FB] filter blur-[150px]" 
-          animate={{ x: [-20, 20, -20], y: [-15, 15, -15] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          animate={isMobile ? undefined : { x: [-20, 20, -20], y: [-15, 15, -15] }}
+          transition={isMobile ? undefined : { duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
         {/* Bottom Right: Very Subtle Emerald Glow shifting slowly (15-25 seconds) */}
         <motion.div 
           className="absolute bottom-0 right-0 w-[50vw] h-[50vw] rounded-full bg-[#3B82F6] filter blur-[130px]" 
-          animate={{ x: [15, -15, 15], y: [15, -15, 15] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+          animate={isMobile ? undefined : { x: [15, -15, 15], y: [15, -15, 15] }}
+          transition={isMobile ? undefined : { duration: 22, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
 

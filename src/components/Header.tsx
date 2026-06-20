@@ -265,7 +265,7 @@ export default function Header() {
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 28, stiffness: 260 }}
+              transition={{ type: 'tween', ease: 'easeOut', duration: 0.22 }}
               className="fixed top-0 right-0 bottom-0 w-full sm:w-[380px] bg-[#FFFFFF] z-50 shadow-2xl lg:hidden flex flex-col p-6 overflow-y-auto"
             >
               {/* Header section in-drawer */}
@@ -304,9 +304,9 @@ export default function Header() {
                     return (
                       <div key={item.id} className="flex flex-col border-b border-slate-100/80">
                         <motion.button
-                          initial={{ opacity: 0, x: 20 }}
+                          initial={{ opacity: 0, x: 10 }}
                           animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: idx * 0.05 + 0.1 }}
+                          transition={{ duration: 0.15, delay: idx * 0.02 + 0.05 }}
                           type="button"
                           onClick={() => setIsMobileTreatmentsExpanded(!isMobileTreatmentsExpanded)}
                           className={`flex items-center justify-between py-3.5 px-3 rounded-xl text-[15px] font-semibold tracking-wide transition-all duration-200 text-left cursor-pointer select-none ${
@@ -352,9 +352,9 @@ export default function Header() {
 
                   return (
                     <motion.a
-                      initial={{ opacity: 0, x: 20 }}
+                      initial={{ opacity: 0, x: 10 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: idx * 0.05 + 0.1 }}
+                      transition={{ duration: 0.15, delay: idx * 0.02 + 0.05 }}
                       key={item.id}
                       href={item.href}
                       data-nav-link="true"
