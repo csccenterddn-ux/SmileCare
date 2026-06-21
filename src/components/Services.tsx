@@ -692,10 +692,10 @@ export default function Services() {
         
         {/* Section Header with Badge */}
         <motion.div 
-          initial={isMobile ? "show" : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? "show" : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
-          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          whileInView={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+          viewport={isMobile ? undefined : { once: true, amount: 0.05 }}
+          transition={isMobile ? { duration: 0 } : { duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-20"
         >
           <span className="text-[11px] font-bold tracking-widest text-[#3B82F6] uppercase bg-[#3B82F6]/8 border border-[#3B82F6]/15 px-4 py-1.5 rounded-full inline-block mb-4.5 shadow-sm select-none animate-pulse">
